@@ -1,138 +1,263 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Chia Wei專案</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="../static/dist/assets/favicon.ico " />
-        <!-- Custom Google font-->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../static/dist/css/styles.css " rel="stylesheet" />
-    </head>
-    <body class="d-flex flex-column h-100 bg-light">
-        <main class="flex-shrink-0">
-            <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-                <div class="container px-5">
-                    <a class="navbar-brand" href="../index.html"><span class="text-gradient d-inline"><b>Chia Wei個人網站</b></span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link" href="../index.html"><font size="5">首頁</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.html"><font size="5">履歷</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="special.html"><font size="5">特殊經歷</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html"><font size="5">專案</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html"><font size="5">聯絡我</font></a></li>
-                        </ul>
-                    </div>
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Chia Wei 的專案作品集" />
+    <meta name="author" content="Chia Wei" />
+    <title>Chia Wei 專案作品</title>
+    <link rel="icon" type="image/x-icon" href="../static/dist/assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="../static/dist/css/styles.css" rel="stylesheet" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        .navbar-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+        }
+
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+            .project-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 1rem 3rem rgba(0,0,0,0.15) !important;
+            }
+
+        .img-col {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .img-container {
+            overflow: hidden;
+            flex-grow: 1;
+            position: relative;
+            min-height: 350px;
+        }
+
+            .img-container a,
+            .project-img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover; 
+                transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+
+        @media (min-width: 992px) {
+            .img-container {
+                min-height: auto;
+                height: 100%;
+            }
+        }
+
+        .project-card:hover .project-img {
+            transform: scale(1.08); 
+        }
+
+        .tech-badge {
+            font-size: 0.85rem;
+            padding: 0.35em 0.8em;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            border-radius: 20px;
+            background-color: rgba(30, 48, 243, 0.1);
+            color: #1e30f3;
+            font-weight: 600;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column h-100 bg-light">
+    <main class="flex-shrink-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 navbar-sticky">
+            <div class="container px-5">
+                <a class="navbar-brand" href="../index.html"><span class="text-gradient d-inline fw-bold fs-3">Chia Wei 個人網站</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link fs-5" href="../index.html">首頁</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="resume.html">履歷</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="special.html">特殊經歷</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5 text-primary" href="projects.html">專案</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="contact.html">聯絡我</a></li>
+                    </ul>
                 </div>
-            </nav>
-            <!-- Projects Section-->
-            <section class="py-5">
-                <div class="container px-5 mb-5">
-                    <div class="text-center mb-5">
-                        <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">我的專案</span></h1>
-                    </div>
-                    <div class="row gx-5 justify-content-center">
-                        <div class="col-lg-11 col-xl-9 col-xxl-8">
-                            <!-- Project Card 1-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">ICLAB</h2>
-                                            <p>在2025的ICLAB，獲得了全班第33名，最終成績<b>A+</b>，並將每一個LAB都記錄起來，提供給未來學弟妹參考。</p>
-                                        </div>
-                                        <a href="https://github.com/wei122802/ICLAB2025_FALL/">
-                                            <img class="img-fluid" src="../static/dist/assets/ICLAB.png"  width="1000" height="1200" alt="..." style="border-radius: 12px;"/>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+            </div>
+        </nav>
 
-                            <!-- Project Card 1-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">其他相關作品</h2>
-                                            <p>內容包含專題演算法實現、自學Python爬google專利的內容以及文章相似度、自學AI文字辨識、VLSI、Verilog...等專案</p>
-                                        </div>
-                                        <a href="myproject.html">
-                                            <img class="img-fluid" src="../static/dist/assets/programmer.png"  width="1000" height="1200" alt="..." style="border-radius: 12px;"/>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Project Card 2-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">課外活動照片</h2>
-                                            <p>電子工程系系學會活動長、吉他社期初公演公關長、吉他社吉他手演出、吉他社主唱演出...等課外活動</p>
-                                        </div>
-                                        <a href="otherpictures.html">
-                                        <img class="img-fluid" src="../static/dist/assets/sing.png" width="850" alt="..."  style="border-radius: 12px;" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Project Card 3-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">補教講師經驗</h2>
-                                            <p>有接近兩年的補習班講師經驗，教學風格不死板，深受學生喜愛，從公司以及同事那裏得到很多學生的反饋。</p>
-                                        </div>
-                                        <a href="feedback.html">
-                                            <img class="img-fluid" src="../static/dist/assets/class.png" width="900" height="950" alt="..."  style="border-radius: 12px;" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Project Card 4-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">銷售就職經驗</h2>
-                                            <p>高中放學期間除了讀書以外， 剩下的時間則是幫家裡分擔家計，故在軍品遊戲玩具店擔任門市介紹商品人員，並在2020獲得公司頒發獎狀，因此從小培養出豐富的社交表達經驗以及外向、開朗個性。</p>
-                                        </div>
-                                        <a href="AOG.html">
-                                        <img class="img-fluid" src="../static/dist/assets/最佳銷售.png" alt="..."  style="border-radius: 12px;" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+        <section class="py-5">
+            <div class="container px-5 mb-5">
+                <div class="text-center mb-5" data-aos="fade-down" data-aos-duration="1000">
+                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">我的專案</span></h1>
+                    <p class="lead fw-light text-muted mt-2">學術研究、實作開發與課外活動紀錄</p>
+                </div>
 
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-11 col-xl-9 col-xxl-9">
+
+                        <div class="card overflow-hidden shadow rounded-4 border-0 mb-5 project-card" data-aos="fade-up">
+                            <div class="card-body p-0">
+                                <div class="row g-0">
+                                    <div class="col-lg-6 p-5 d-flex align-items-center">
+                                        <div>
+                                            <div class="text-uppercase text-primary fw-bold mb-2">Academic Project</div>
+                                            <h2 class="fw-bolder">ICLAB 積體電路設計</h2>
+                                            <p class="mb-4">在 2025 年的 ICLAB 課程中，展現了扎實的數位 IC 設計能力。獲得全班第 33 名，最終成績 <span class="text-gradient fw-bold">A+</span>。我將每一個 LAB 的過程與程式碼完整記錄，傳承給未來的學弟妹。</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 img-col">
+                                        <div class="img-container">
+                                            <a href="https://github.com/wei122802/ICLAB2025_FALL/" target="_blank">
+                                                <img class="img-fluid project-img" src="../static/dist/assets/ICLAB.png" alt="ICLAB Project" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
+                        <div class="card overflow-hidden shadow rounded-4 border-0 mb-5 project-card" data-aos="fade-up">
+                            <div class="card-body p-0">
+                                <div class="row g-0 flex-lg-row-reverse">
+                                    <div class="col-lg-6 p-5 d-flex align-items-center">
+                                        <div>
+                                            <div class="text-uppercase text-primary fw-bold mb-2">Self-Learning & Dev</div>
+                                            <h2 class="fw-bolder">其他相關作品</h2>
+                                            <p class="mb-3">包含多元的技術實作：從專題演算法實現、Python 網路爬蟲（Google 專利與文章相似度分析），到 AI 文字辨識與 VLSI/Verilog 相關設計。</p>
+
+                                            <div class="mb-4">
+                                                <span class="tech-badge">Python</span>
+                                                <span class="tech-badge">AI/ML</span>
+                                                <span class="tech-badge">Verilog</span>
+                                                <span class="tech-badge">Web Crawler</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 img-col">
+                                        <div class="img-container">
+                                            <a href="myproject.html">
+                                                <img class="img-fluid project-img" src="../static/dist/assets/programmer.png" alt="Other Projects" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card overflow-hidden shadow rounded-4 border-0 mb-5 project-card" data-aos="fade-up">
+                            <div class="card-body p-0">
+                                <div class="row g-0">
+                                    <div class="col-lg-6 p-5 d-flex align-items-center">
+                                        <div>
+                                            <div class="text-uppercase text-primary fw-bold mb-2">Extra-curricular</div>
+                                            <h2 class="fw-bolder">課外活動與領導</h2>
+                                            <p class="mb-4">除了學術，我也活躍於社團活動。曾擔任<b>電子工程系系學會活動長</b>、<b>吉他社公關長</b>。擁有豐富的舞台經驗，包括吉他手與主唱演出，培養了團隊合作與公眾表達能力。</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 img-col">
+                                        <div class="img-container">
+                                            <a href="otherpictures.html">
+                                                <img class="img-fluid project-img" src="../static/dist/assets/sing.png" alt="Singing" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card overflow-hidden shadow rounded-4 border-0 mb-5 project-card" data-aos="fade-up">
+                            <div class="card-body p-0">
+                                <div class="row g-0 flex-lg-row-reverse">
+                                    <div class="col-lg-6 p-5 d-flex align-items-center">
+                                        <div>
+                                            <div class="text-uppercase text-primary fw-bold mb-2">Teaching Experience</div>
+                                            <h2 class="fw-bolder">補教講師經驗</h2>
+                                            <p class="mb-4">擁有接近兩年的數學講師經驗。我堅持不死板的教學風格，注重邏輯引導而非死記硬背。這段經歷讓我收穫了許多學生的正面回饋，也磨練了我的溝通與耐心。</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 img-col">
+                                        <div class="img-container">
+                                            <a href="feedback.html">
+                                                <img class="img-fluid project-img" src="../static/dist/assets/class.png" alt="Teaching" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card overflow-hidden shadow rounded-4 border-0 project-card" data-aos="fade-up">
+                            <div class="card-body p-0">
+                                <div class="row g-0">
+                                    <div class="col-lg-6 p-5 d-flex align-items-center">
+                                        <div>
+                                            <div class="text-uppercase text-primary fw-bold mb-2">Sales Experience</div>
+                                            <h2 class="fw-bolder">銷售與職場軟實力</h2>
+                                            <p class="mb-4">高中時期為了分擔家計，於軍品玩具店擔任門市人員。這份工作培養了我外向開朗的個性與應對進退的技巧，並於 2020 年獲得公司頒發<b>最佳銷售獎狀</b>肯定。</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 img-col">
+                                        <div class="img-container">
+                                            <a href="AOG.html">
+                                                <img class="img-fluid project-img" src="../static/dist/assets/最佳銷售.png" alt="Sales Award" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-            </section>
-            <!-- Call to action section-->
-            <section class="py-5 bg-gradient-primary-to-secondary text-white">
-                <div class="container px-5 my-5">
-                    <div class="text-center">
-                        <h2 class="display-4 fw-bolder mb-4">~~未來將新增更多相關作品~~</h2>
-                        <!-- <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">Contact me</a> -->
-                    </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-gradient-primary-to-secondary text-white">
+            <div class="container px-5 my-5">
+                <div class="text-center" data-aos="zoom-in">
+                    <h2 class="display-4 fw-bolder mb-4">持續精進，更多作品開發中</h2>
+                    <div class="fs-4 fw-light text-white-50 mb-4">To be continued...</div>
                 </div>
-            </section>
-        </main>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="../static/dist/js/scripts.js"></script>
-    </body>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-center text-center">
+                <div class="col-auto">
+                    <div class="small m-0 text-muted">Copyright &copy; Chia Wei 2026</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/dist/js/scripts.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 400,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
 </html>

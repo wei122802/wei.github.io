@@ -1,131 +1,138 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Chia Wei個人履歷</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="../static/dist/assets/favicon.ico" />
-        <!-- Custom Google font-->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../static/dist/css/styles.css" rel="stylesheet" />
-    </head>
-    <body class="d-flex flex-column h-100 bg-light">
-        <main class="flex-shrink-0">
-            <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-                <div class="container px-5">
-                    <a class="navbar-brand" href="../index.html"><span class="text-gradient d-inline"><b>Chia Wei個人網站</b></span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link" href="../index.html"><font size="5">首頁</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.html"><font size="5">履歷</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="special.html"><font size="5">特殊經歷</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html"><font size="5">專案</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html"><font size="5">聯絡我</font></a></li>
-                        </ul>
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Chia Wei的個人履歷與作品集" />
+    <meta name="author" content="Chia Wei" />
+    <title>Chia Wei 個人履歷</title>
+    <link rel="icon" type="image/x-icon" href="../static/dist/assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="../static/dist/css/styles.css" rel="stylesheet" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        .hover-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .hover-card:hover {
+                transform: translateY(-10px); 
+                box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important; 
+            }
+
+        .skill-badge {
+            transition: all 0.3s;
+            cursor: default;
+        }
+
+            .skill-badge:hover {
+                transform: scale(1.05); 
+            }
+    </style>
+</head>
+<body class="d-flex flex-column h-100 bg-light">
+    <main class="flex-shrink-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 sticky-top shadow-sm">
+            <div class="container px-5">
+                <a class="navbar-brand" href="../index.html"><span class="text-gradient d-inline fw-bold fs-3">Chia Wei 個人網站</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link fs-5" href="../index.html">首頁</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5 text-primary" href="resume.html">履歷</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="special.html">特殊經歷</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="projects.html">專案</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="contact.html">聯絡我</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container px-5 my-5">
+            <div class="text-center mb-5" data-aos="fade-down">
+                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">履 歷</span></h1>
+            </div>
+
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-11 col-xl-9 col-xxl-8">
+
+                    <div class="text-center mb-5" data-aos="zoom-in" data-aos-duration="1000">
+                        <img class="img-fluid shadow-lg" src="../static/dist/assets/簡歷.png" alt="簡歷預覽" style="border-radius: 12px; max-width: 100%; width: 700px;" />
                     </div>
-                </div>
-            </nav>
-            <!-- Page Content-->
-            <div class="container px-5 my-5">
-                <div class="text-center mb-5">
-                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">履 歷</span></h1>
-                </div>
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-lg-11 col-xl-9 col-xxl-8">
-                        <div class="container">
-                            <div class="container">
-                                <div class="container">
-                                    <div class="container">
-                                        <img class="img-fluid" src="../static/dist/assets/簡歷.png" alt="..." width="700" style="border-radius: 12px;" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Experience Section-->
-                    </br>
+
                     <section>
-                        <div class="d-flex align-items-center justify-content-between mb-4">
-                            <h2 class="text-info fw-bolder mb-0">學歷</h2>
-                            <a class="btn btn-primary px-4 py-3" href="../static/dist/assets/簡歷.pdf">
-                                <div class="d-inline-block bi bi-download me-2"></div>
-                                下載我的簡歷
+                        <div class="d-flex align-items-center justify-content-between mb-4" data-aos="fade-right">
+                            <h2 class="text-info fw-bolder mb-0"><i class="bi bi-mortarboard-fill me-2"></i>學歷</h2>
+                            <a class="btn btn-outline-primary px-4 py-3 fw-bold" href="../static/dist/assets/簡歷.pdf" download>
+                                <i class="bi bi-download me-2"></i>下載簡歷 PDF
                             </a>
                         </div>
 
-                        <div class="card shadow border-0 rounded-4 mb-5">
+                        <div class="card shadow border-0 rounded-4 mb-5 hover-card" data-aos="fade-up">
                             <div class="card-body p-5">
                                 <div class="row align-items-center gx-5">
-                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                        <div class="bg-light p-4 rounded-4">
+                                    <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light p-4 rounded-4 text-center">
                                             <div class="text-info fw-bolder mb-2">2025 - 至今</div>
-                                            <div class="mb-2">
-                                                <div class="small fw-bolder">國立陽明交通大學</div>
-                                                <div class="small text-muted">東區, 新竹市</div>
-                                            </div>
-                                            <div class="fst-italic">
-                                                <div class="small text-muted">研究所</div>
-                                                <div class="small text-muted">電子工程系</div>
-                                            </div>
+                                            <div class="small fw-bolder">國立陽明交通大學</div>
+                                            <div class="small text-muted">新竹市 東區</div>
+                                            <div class="fst-italic small text-primary mt-2">電子工程所 研究所</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-8">
-                                        <div>● 指導教授:郭峻因 教授<br /><br />● 實驗室:iVsLab 智慧視覺系統設計實驗室</div>
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="mb-2"><i class="bi bi-person-badge me-2 text-info"></i>指導教授: 郭峻因 教授</li>
+                                            <li class="mb-2"><i class="bi bi-laptop me-2 text-info"></i>實驗室: iVsLab 智慧視覺系統設計實驗室</li>
+                                            <li><i class="bi bi-bar-chart-fill me-2 text-info"></i>GPA: 4.15 / 4.3</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="card shadow border-0 rounded-4 mb-5">
+                        <div class="card shadow border-0 rounded-4 mb-5 hover-card" data-aos="fade-up" data-aos-delay="100">
                             <div class="card-body p-5">
                                 <div class="row align-items-center gx-5">
-                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                        <div class="bg-light p-4 rounded-4">
+                                    <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light p-4 rounded-4 text-center">
                                             <div class="text-info fw-bolder mb-2">2021 - 2025</div>
-                                            <div class="mb-2">
-                                                <div class="small fw-bolder">國立臺北科技大學</div>
-                                                <div class="small text-muted">大安區, 臺北市</div>
-                                            </div>
-                                            <div class="fst-italic">
-                                                <div class="small text-muted">大學</div>
-                                                <div class="small text-muted">電子工程系</div>
-                                            </div>
+                                            <div class="small fw-bolder">國立臺北科技大學</div>
+                                            <div class="small text-muted">臺北市 大安區</div>
+                                            <div class="fst-italic small text-primary mt-2">電子工程系 學士</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-8">
-                                        <div>在大學一年級致力於社團以及系會活動的同時，也不會放棄任何一堂課程，並在社團中的大型活動中擔任<b>公關長職位</b>；在大學二年級便接下電子工程系系學會的<b>活動長</b>職位，並在專業學科上獲得<b>前三名</b>的成績；大學三年級時，主要投入專題研究，其餘的時間在學習成績上多下功夫，獲得了<b>系排第一名</b>的佳績</div>
+                                        <div class="mb-3"><span class="badge bg-primary me-2">大一</span>擔任社團公關長，兼顧社團活動與學業。</div>
+                                        <div class="mb-3"><span class="badge bg-primary me-2">大二</span>擔任系學會活動長，成績榮獲全系 <span class="text-gradient fw-bold">前三名</span>。</div>
+                                        <div class="mb-0"><span class="badge bg-primary me-2">大三</span>專注專題研究與實習，學業成績 <span class="text-gradient fw-bold">全系第一名</span>。</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="card shadow border-0 rounded-4 mb-5">
+                        <div class="card shadow border-0 rounded-4 mb-5 hover-card" data-aos="fade-up" data-aos-delay="200">
                             <div class="card-body p-5">
                                 <div class="row align-items-center gx-5">
-                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                        <div class="bg-light p-4 rounded-4">
+                                    <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light p-4 rounded-4 text-center">
                                             <div class="text-info fw-bolder mb-2">2018 - 2021</div>
-                                            <div class="mb-2">
-                                                <div class="small fw-bolder">國立彰師附工</div>
-                                                <div class="small text-muted">彰化市, 彰化縣</div>
-                                            </div>
-                                            <div class="fst-italic">
-                                                <div class="small text-muted">高職</div>
-                                                <div class="small text-muted">資訊科</div>
-                                            </div>
+                                            <div class="small fw-bolder">國立彰師附工</div>
+                                            <div class="small text-muted">彰化縣 彰化市</div>
+                                            <div class="fst-italic small text-primary mt-2">資訊科</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-8">
-                                        <div>高職三年認真向上，術科的部分鑽研C++以及8051單晶片控制，學科的部分擅長電子學、基本電學、數位邏輯等專業科目，並在專業科目的統測上得到<b>100分</b>的高分；數學也拿到<b>96分</b>的高分，無論是在模擬考還是段考都會拚盡全力，<b>決不怠懈！</b></div>
+                                        <p>鑽研 C++ 及 8051 單晶片控制，擅長電子學、數位邏輯等專業科目。</p>
+                                        <div class="d-flex gap-2 flex-wrap">
+                                            <span class="badge rounded-pill bg-success">專業科目一 100分</span>
+                                            <span class="badge rounded-pill bg-success">數學 96分</span>
+                                            <span class="badge rounded-pill bg-secondary">毅力與決心</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -133,214 +140,151 @@
                     </section>
 
                     <section>
-                        <h2 class="text-primary fw-bolder mb-4">就職經驗</h2>
-                        
-                        <div class="card shadow border-0 rounded-4 mb-5">
+                        <h2 class="text-primary fw-bolder mb-4 mt-5" data-aos="fade-right"><i class="bi bi-briefcase-fill me-2"></i>就職經驗</h2>
+
+                        <div class="card shadow border-0 rounded-4 mb-5 hover-card" data-aos="flip-up">
                             <div class="card-body p-5">
                                 <div class="row align-items-center gx-5">
-                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                        <div class="bg-light p-4 rounded-4">
-                                            <div class="text-primary fw-bolder mb-2">2024/7~2024/9</div>
-                                            <div class="small fw-bolder">臻鼎科技股份有限公司</div>
+                                    <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light p-4 rounded-4 text-center">
+                                            <div class="text-primary fw-bolder mb-2">2024/7 ~ 2024/9</div>
+                                            <div class="fw-bolder">臻鼎科技</div>
                                             <div class="small text-muted">資訊科技助理工程師</div>
-                                            <div class="fst-italic">
-                                                <div class="small text-muted">廣東省, 深圳市</div>
-                                            </div>
+                                            <div class="small text-muted fst-italic mt-1"><i class="bi bi-geo-alt-fill"></i> 廣東省 深圳市</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-8">
-                                        <div>於<b>深圳</b>的兩個月暑期實習訓練，
-                                            透過ERP系統來更了解世界PCB市佔率第一企業的運作核心、
-                                            需求實現以及職場探索，
-                                            不僅體驗了深圳文化還深入了解<b>PCB產業</b>。
-                                        </div>
+                                        <p class="mb-0">於<b>深圳</b>的暑期實習，透過 ERP 系統深入了解世界市佔第一的 PCB 企業運作核心。不僅體驗了深圳文化，更深入掌握了 <b>PCB 產業</b> 的需求實現與職場生態。</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="card shadow border-0 rounded-4 mb-5">
+                        <div class="card shadow border-0 rounded-4 mb-5 hover-card" data-aos="flip-up">
                             <div class="card-body p-5">
                                 <div class="row align-items-center gx-5">
-                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                        <div class="bg-light p-4 rounded-4">
-                                            <div class="text-primary fw-bolder mb-2">2024/9~2025/8</div>
-                                            <div class="small fw-bolder">萬通教育股份有限公司</div>
+                                    <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light p-4 rounded-4 text-center">
+                                            <div class="text-primary fw-bolder mb-2">2024/9 ~ 2025/8</div>
+                                            <div class="fw-bolder">萬通教育</div>
                                             <div class="small text-muted">高中數學講師</div>
-                                            <div class="fst-italic">
-                                                <div class="small text-muted">遠距上課</div>
-                                            </div>
+                                            <div class="small text-muted fst-italic mt-1"><i class="bi bi-camera-video-fill"></i> 遠距教學</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-8">
-                                        <div>一對一的高中數學講師，善用自己邏輯推理的能力。</div>
+                                        一對一高中數學講師，善用邏輯推理能力協助學生突破盲點，並針對個人需求調整教學步調。
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="card shadow border-0 rounded-4 mb-5">
+                        <div class="card shadow border-0 rounded-4 mb-5 hover-card" data-aos="flip-up">
                             <div class="card-body p-5">
                                 <div class="row align-items-center gx-5">
-                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                        <div class="bg-light p-4 rounded-4">
-                                            <div class="text-primary fw-bolder mb-2">2023/7~2025/2</div>
-                                            <div class="small fw-bolder">敦翰文理補習班</div>
-                                            <div class="small text-muted">高職數學C講師</div>
-                                            <div class="fst-italic">
-                                                <div class="small text-muted">三重區, 新北市</div>
-                                            </div>
+                                    <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light p-4 rounded-4 text-center">
+                                            <div class="text-primary fw-bolder mb-2">2023/7 ~ 2025/2</div>
+                                            <div class="fw-bolder">敦翰文理補習班</div>
+                                            <div class="small text-muted">高職數學 C 講師</div>
+                                            <div class="small text-muted fst-italic mt-1"><i class="bi bi-geo-alt-fill"></i> 新北市 三重區</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-8">
-                                        <div>一對多的數學講師，讓我學會了如何更<b>有條理、有邏輯</b>的描述我腦中的數學公式以及想法來讓學生們理解。不僅如此，也因為擔任數學講師緣故，所以我更加了解目前新課綱的教學內容，不與新時代教育脫鉤。</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card shadow border-0 rounded-4 mb-5">
-                            <div class="card-body p-5">
-                                <div class="row align-items-center gx-5">
-                                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                        <div class="bg-light p-4 rounded-4">
-                                            <div class="text-primary fw-bolder mb-2">2022/9~2023/7</div>
-                                            <div class="small fw-bolder">明光義塾</div>
-                                            <div class="small text-muted">國高中數學講師</div>
-                                            <div class="fst-italic">
-                                                <div class="small text-muted">大安區, 臺北市</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-8">
-                                        <div>一對三的教學模式，上課內容為<b>高中數學</b>以及<b>國中小全科目</b>。講課時會應用自己國高中所歸納的筆記上課，教學方式<b>深受學生喜歡</b>。</div>
+                                        一對多教學模式。學會如何<b>有條理、有邏輯</b>地描述數學公式與解題思路。擔任講師讓我深入了解新課綱教學內容，確保教學與時俱進。
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
 
-                        <!-- Certification Section-->
-                        <section>
-                            <h2 class="text-secondary fw-bolder mb-4">證照</h2>
-                            <!-- Education Card 1-->
-                            <div class="card shadow border-0 rounded-4 mb-5">
-                                <div class="card-body p-4">
-                                    <div class="row align-items-center gx-5">
-                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                            <div class="bg-light p-4 rounded-4">
-                                                <div class="text-secondary fw-bolder mb-2">電腦硬體裝修乙級</div>
-                                                <div class="mb-2">
-                                                    <div class="small fw-bolder">民國110年5月14日</div>
-                                                    <div class="small text-muted"></div>
-                                                </div>
-                                                <div class="fst-italic">
-                                                    <div class="small text-muted">Server架設、HTML網頁、電腦故障排除</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <img class="img-fluid" src="../static/dist/assets/certification/硬體乙.png" alt="..." width="300" style="margin-left: 10%;"  style="border-radius: 12px;"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Education Card 2-->
-                            <div class="card shadow border-0 rounded-4 mb-5">
-                                <div class="card-body p-4">
-                                    <div class="row align-items-center gx-5">
-                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                            <div class="bg-light p-4 rounded-4">
-                                                <div class="text-secondary fw-bolder mb-2">電腦硬體裝修丙級</div>
-                                                <div class="mb-2">
-                                                    <div class="small fw-bolder">民國109年9月11日</div>
-                                                </div>
-                                                <div class="fst-italic">
-                                                    <div class="small text-muted">重灌Win10、重灌Linux、HTML網頁</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <img class="img-fluid" src="../static/dist/assets/certification/硬體丙.png" alt="..." width="300" style="margin-left: 10%;"  style="border-radius: 12px;"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                             <!-- Education Card 3-->
-                             <div class="card shadow border-0 rounded-4 mb-5">
-                                <div class="card-body p-4">
-                                    <div class="row align-items-center gx-5">
-                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                            <div class="bg-light p-4 rounded-4">
-                                                <div class="text-secondary fw-bolder mb-2">工業電子丙級</div>
-                                                <div class="mb-2">
-                                                    <div class="small fw-bolder">民國108年9月22日</div>
-                                                </div>
-                                                <div class="fst-italic">
-                                                    <div class="small text-muted">儀表操作、焊接、電路設計</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <img class="img-fluid" src="../static/dist/assets/certification/工業電子丙.png" alt="..." width="300" style="margin-left: 10%;"  style="border-radius: 12px;"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
+                    <section>
+                        <h2 class="text-secondary fw-bolder mb-4 mt-5" data-aos="fade-right"><i class="bi bi-patch-check-fill me-2"></i>證照</h2>
 
-                        <!-- Divider-->
-                        <div class="pb-5"></div>
-                        <!-- Skills Section-->
-                        <section>
-                            <!-- Skillset Card-->
-                            <div class="card shadow border-0 rounded-4 mb-5">
-                                <div class="card-body p-5">
-                                    <!-- Professional skills list-->
-                                    <div class="mb-5">
-                                        <div class="d-flex align-items-center mb-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-tools"></i></div>
-                                            <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">專長</span></h3>
-                                        </div>
-                                        <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-warning rounded-4 p-3 h-100">數位IC設計</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-warning rounded-4 p-3 h-100">邏輯推理</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-warning rounded-4 p-3 h-100">資料分析</div></div>
-                                        </div>
-                                        <div class="row row-cols-1 row-cols-md-3">
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-danger rounded-4 p-3 h-100">社交能力</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-danger rounded-4 p-3 h-100">團隊合作</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-danger rounded-4 p-3 h-100">高抗壓力</div></div>
+                        <div class="card shadow border-0 rounded-4 mb-5 hover-card" data-aos="fade-left">
+                            <div class="card-body p-4">
+                                <div class="row align-items-center gx-5">
+                                    <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light p-4 rounded-4">
+                                            <div class="text-secondary fw-bolder mb-2 fs-5">電腦硬體裝修乙級</div>
+                                            <div class="small text-muted mb-2">民國 110 年 5 月</div>
+                                            <div class="d-flex flex-wrap gap-2">
+                                                <span class="badge bg-secondary bg-opacity-10 text-secondary border border-secondary">Server 架設</span>
+                                                <span class="badge bg-secondary bg-opacity-10 text-secondary border border-secondary">網頁設計</span>
+                                            </div>
                                         </div>
                                     </div>
-                                    <!-- Languages list-->
-                                    <div class="mb-0">
-                                        <div class="d-flex align-items-center mb-4">
-                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-code-slash"></i></div>
-                                            <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">語言</span></h3>
-                                        </div>
-                                        <div class="row row-cols-1 row-cols-md-3 mb-4">
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-warning rounded-4 p-3 h-100">Verilog/System Verilog</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-warning rounded-4 p-3 h-100">Python</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-warning rounded-4 p-3 h-100">H-Spice</div></div>
-                                        </div>
-                                        <div class="row row-cols-1 row-cols-md-3">
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-danger rounded-4 p-3 h-100">Matlab</div></div>
-                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-danger rounded-4 p-3 h-100">C++</div></div>
-                                            <div class="col"><div class="d-flex align-items-center bg-danger rounded-4 p-3 h-100">VHDL</div></div>
-                                        </div>
+                                    <div class="col-lg-6 text-center">
+                                        <img class="img-fluid rounded-3 shadow-sm" src="../static/dist/assets/certification/硬體乙.png" alt="乙級證照" style="max-height: 150px;" />
                                     </div>
                                 </div>
                             </div>
-                        </section>
-                    </div>
+                        </div>
+
+                    </section>
+
+                    <section>
+                        <div class="card shadow border-0 rounded-4 mb-5" data-aos="zoom-in-up">
+                            <div class="card-body p-5">
+
+                                <div class="mb-5">
+                                    <div class="d-flex align-items-center mb-4">
+                                        <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-cpu"></i></div>
+                                        <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">專業技能</span></h3>
+                                    </div>
+                                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                                        <div class="col"><div class="d-flex align-items-center justify-content-center bg-light border border-primary text-primary fw-bold rounded-pill p-3 skill-badge">數位 IC 設計</div></div>
+                                        <div class="col"><div class="d-flex align-items-center justify-content-center bg-light border border-primary text-primary fw-bold rounded-pill p-3 skill-badge">EDA Tools</div></div>
+                                        <div class="col"><div class="d-flex align-items-center justify-content-center bg-light border border-primary text-primary fw-bold rounded-pill p-3 skill-badge">邏輯推理</div></div>
+                                        <div class="col"><div class="d-flex align-items-center justify-content-center bg-light border border-primary text-primary fw-bold rounded-pill p-3 skill-badge">社交能力</div></div>
+                                        <div class="col"><div class="d-flex align-items-center justify-content-center bg-light border border-primary text-primary fw-bold rounded-pill p-3 skill-badge">團隊合作</div></div>
+                                        <div class="col"><div class="d-flex align-items-center justify-content-center bg-light border border-primary text-primary fw-bold rounded-pill p-3 skill-badge">高抗壓力</div></div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-0">
+                                    <div class="d-flex align-items-center mb-4">
+                                        <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-code-slash"></i></div>
+                                        <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">程式語言 & 工具</span></h3>
+                                    </div>
+                                    <div class="row row-cols-2 row-cols-md-4 g-3 text-center">
+                                        <div class="col"><span class="badge bg-dark p-3 w-100 fs-6 skill-badge">Verilog</span></div>
+                                        <div class="col"><span class="badge bg-secondary p-3 w-100 fs-6 skill-badge">System Verilog</span></div>
+                                        <div class="col"><span class="badge bg-warning text-dark p-3 w-100 fs-6 skill-badge">Python</span></div>
+                                        <div class="col"><span class="badge bg-info text-dark p-3 w-100 fs-6 skill-badge">C++</span></div>
+                                        <div class="col"><span class="badge bg-success p-3 w-100 fs-6 skill-badge">Verdi</span></div>
+                                        <div class="col"><span class="badge bg-success p-3 w-100 fs-6 skill-badge">Innovus</span></div>
+                                        <div class="col"><span class="badge bg-success p-3 w-100 fs-6 skill-badge">PrimeTime</span></div>
+                                        <div class="col"><span class="badge bg-success p-3 w-100 fs-6 skill-badge">VCS</span></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="../static/dist/js/scripts.js"></script>
-    </body>
+    <footer class="bg-white py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto"><div class="small m-0 text-muted">Copyright &copy; Chia Wei 2026</div></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/dist/js/scripts.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 400, 
+            once: true,    
+            offset: 100   
+        });
+    </script>
+</body>
 </html>

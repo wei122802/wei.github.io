@@ -1,132 +1,209 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Chia Wei特殊經歷</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="../static/dist/assets/favicon.ico" />
-        <!-- Custom Google font-->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- SimpleLightbox plugin CSS-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../static/dist/css/styles2.css" rel="stylesheet" />
-        
-    </head>
-    <body class="d-flex flex-column h-100 bg-light">
-        <main class="flex-shrink-0">
-            <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-                <div class="container px-5">
-                    <a class="navbar-brand" href="../index.html"><span class="text-gradient d-inline"><b>Chia Wei個人網站</b></span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link" href="../index.html"><font size="5">首頁</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.html"><font size="5">履歷</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="special.html"><font size="5">特殊經歷</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html"><font size="5">專案</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html"><font size="5">聯絡我</font></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- Page Content-->
-            <div class="container px-3 my-5">
-                <div class="text-center mb-0">
-                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">特殊經歷</span></h1>
-                </div>
-                <div class="row gx-2 justify-content-center">
-                    <div class="col-lg-11 col-xl-9 col-xxl-8">
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Chia Wei 的特殊經歷與獲獎紀錄" />
+    <meta name="author" content="Chia Wei" />
+    <title>Chia Wei 特殊經歷</title>
+    <link rel="icon" type="image/x-icon" href="../static/dist/assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+    <link href="../static/dist/css/styles2.css" rel="stylesheet" />
 
-                        <div class="pb-2"></div>
-                    </div>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        .navbar-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+        }
+
+        .portfolio-box {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            background: #ffffff;
+            border: 1px solid rgba(0,0,0,0.08);
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+            .portfolio-box img {
+                width: 100%;
+                height: 220px; 
+                object-fit: contain; 
+                transition: transform 0.5s ease;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                border-radius: 4px; 
+            }
+
+            .portfolio-box:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+                border-color: rgba(30, 48, 243, 0.3);
+            }
+
+                .portfolio-box:hover img {
+                    transform: scale(1.03); 
+                }
+
+        .portfolio-box-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0; 
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(30, 48, 243, 0.85), rgba(255, 33, 113, 0.85));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        .portfolio-box:hover .portfolio-box-caption {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column h-100 bg-light">
+    <main class="flex-shrink-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 navbar-sticky">
+            <div class="container px-5">
+                <a class="navbar-brand" href="../index.html"><span class="text-gradient d-inline fw-bold fs-3">Chia Wei 個人網站</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link fs-5" href="../index.html">首頁</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="resume.html">履歷</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5 text-primary" href="special.html">特殊經歷</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="projects.html">專案</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="contact.html">聯絡我</a></li>
+                    </ul>
                 </div>
             </div>
+        </nav>
 
-            <div id="portfolio">
-                <div class="container-fluid p-0">
-                    <div class="row g-0">
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="profile bg-gradient-primary-to-secondary">
-                                <a class="portfolio-box" href="../static/dist/assets/獎狀/111-1書卷.png" title="111學年度上學期書卷獎">
-                                    <img class="img-fluid" src="../static/dist/assets/獎狀/111-1書卷.png" alt="..." />
-                                    <div class="portfolio-box-caption">
-                                        <div class="project-category text-white-50"><font size="4">校內成績</font></div>
-                                        <div class="project-name">111-1書卷獎</div>
-                                    </div>
-                                </a>
+        <div class="container px-3 my-5">
+            <div class="text-center" data-aos="fade-down" data-aos-duration="1000">
+                <h1 class="display-5 fw-bolder mb-2"><span class="text-gradient d-inline">特殊經歷</span></h1>
+                <p class="lead fw-light text-muted">榮譽獎項 & 實習紀錄</p>
+            </div>
+        </div>
+
+        <div id="portfolio" class="pb-5">
+            <div class="container px-4">
+                <div class="row g-4 justify-content-center">
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                        <a class="portfolio-box" href="../static/dist/assets/獎狀/111-1書卷.png" title="111學年度上學期書卷獎">
+                            <img class="img-fluid" src="../static/dist/assets/獎狀/111-1書卷.png" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50 fs-5">校內成績</div>
+                                <div class="project-name fs-4 fw-bold">111-1 書卷獎</div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio-box" href="../static/dist/assets/獎狀/111-2書卷.png" title="111學年度下學期書卷獎">
-                                <img class="img-fluid" src="../static/dist/assets/獎狀/111-2書卷.png" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-category text-white-50"><font size="4">校內成績</font></div>
-                                    <div class="project-name">111-2書卷獎</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio-box" href="../static/dist/assets/獎狀/112-1書卷.png" title="112學年度上學期書卷獎">
-                                <img class="img-fluid" src="../static/dist/assets/獎狀/112-1書卷.png" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-category text-white-50"><font size="4">校內成績</font></div>
-                                    <div class="project-name">112-1書卷獎</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio-box" href="../static/dist/assets/獎狀/創創競賽銅牌英.png" title="與眾多公司如NXP、ST、台積電等等公司合作">
-                                <img class="img-fluid" src="../static/dist/assets/獎狀/創創競賽銅牌英.png" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-category text-white-50"><font size="4">全國比賽</font></div>
-                                    <div class="project-name">全國創創科技挑戰賽銅牌</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio-box" href="../static/dist/assets/獎狀/實習證明.jpg" title="前往深圳擔任資訊處理助理工程師，更加了解PCB相關內容">
-                                <img class="img-fluid" src="../static/dist/assets/獎狀/實習證明.jpg" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-category text-white-50"><font size="4">海外實習</font></div>
-                                    <div class="project-name">臻鼎資訊處理助理工程師</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio-box" href="../static/dist/assets/獎狀/專題競賽.jpg" title="在全校電子工程系專題競賽中獲取佳作。">
-                                <img class="img-fluid" src="../static/dist/assets/獎狀/專題競賽.jpg" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-category text-white-50"><font size="4">校內競賽</font></div>
-                                    <div class="project-name">電子工程系專題競賽</div>
-                                </div>
-                            </a>
-                        </div>
+                        </a>
                     </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <a class="portfolio-box" href="../static/dist/assets/獎狀/111-2書卷.png" title="111學年度下學期書卷獎">
+                            <img class="img-fluid" src="../static/dist/assets/獎狀/111-2書卷.png" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50 fs-5">校內成績</div>
+                                <div class="project-name fs-4 fw-bold">111-2 書卷獎</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <a class="portfolio-box" href="../static/dist/assets/獎狀/112-1書卷.png" title="112學年度上學期書卷獎">
+                            <img class="img-fluid" src="../static/dist/assets/獎狀/112-1書卷.png" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50 fs-5">校內成績</div>
+                                <div class="project-name fs-4 fw-bold">112-1 書卷獎</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <a class="portfolio-box" href="../static/dist/assets/獎狀/創創競賽銅牌英.png" title="全國創創科技挑戰賽銅牌">
+                            <img class="img-fluid" src="../static/dist/assets/獎狀/創創競賽銅牌英.png" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50 fs-5">全國比賽</div>
+                                <div class="project-name fs-4 fw-bold">創創挑戰賽 銅牌</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <a class="portfolio-box" href="../static/dist/assets/獎狀/實習證明.jpg" title="臻鼎資訊處理助理工程師">
+                            <img class="img-fluid" src="../static/dist/assets/獎狀/實習證明.jpg" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50 fs-5">海外實習</div>
+                                <div class="project-name fs-4 fw-bold">臻鼎實習證明</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                        <a class="portfolio-box" href="../static/dist/assets/獎狀/專題競賽.jpg" title="電子工程系專題競賽">
+                            <img class="img-fluid" src="../static/dist/assets/獎狀/專題競賽.jpg" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50 fs-5">校內競賽</div>
+                                <div class="project-name fs-4 fw-bold">專題競賽 佳作</div>
+                            </div>
+                        </a>
+                    </div>
+
                 </div>
             </div>
+        </div>
 
-        </main>
+    </main>
 
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <footer class="bg-white py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-center text-center">
+                <div class="col-auto">
+                    <div class="small m-0 text-muted">Copyright &copy; Chia Wei 2026</div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="../static/dist/js/scripts2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-        <!-- SimpleLightbox plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
 
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+    <script src="../static/dist/js/scripts2.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 400,
+            once: true,
+            offset: 50
+        });
+        
+        var lightbox = new SimpleLightbox('#portfolio a.portfolio-box', {
+            overlay: true,
+            docClose: true,
+            animationSpeed: 200,
+            preloading: true,
+            alertError: false
+        });
+    </script>
+</body>
 </html>
-special
-sixth_commit
