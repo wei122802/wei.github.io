@@ -1,138 +1,249 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Chia Wei學生回饋</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="../static/dist/assets/favicon.ico" />
-        <!-- Custom Google font-->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- SimpleLightbox plugin CSS-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../static/dist/css/styles2.css" rel="stylesheet" />
-        
-    </head>
-    <body class="d-flex flex-column h-100 bg-light">
-        <main class="flex-shrink-0">
-            <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-                <div class="container px-5">
-                    <a class="navbar-brand" href="../index.html"><span class="text-gradient d-inline"><b>Chia Wei個人網站</b></span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link" href="../index.html"><font size="5">首頁</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.html"><font size="5">履歷</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="special.html"><font size="5">特殊經歷</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html"><font size="5">專案</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html"><font size="5">聯絡我</font></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- Page Content-->
-            <div class="container px-3 my-5">
-                <div class="text-center mb-0">
-                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">學生回饋</span></h1>
-                </div>
-                <div class="row gx-2 justify-content-center">
-                    <div class="col-lg-11 col-xl-9 col-xxl-8">
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Chia Wei 的學生教學回饋" />
+    <meta name="author" content="Chia Wei" />
+    <title>Chia Wei 學生回饋</title>
+    <link rel="icon" type="image/x-icon" href="../static/dist/assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+    <link href="../static/dist/css/styles2.css" rel="stylesheet" />
 
-                        <div class="pb-2"></div>
-                    </div>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        .navbar-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-hover-effect {
+            transition: all 0.3s ease;
+            border-radius: 50px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+            .btn-hover-effect:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 15px rgba(30, 48, 243, 0.2);
+            }
+
+        .portfolio-box {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            background: #fff; 
+        }
+
+            .portfolio-box img {
+                width: 100%;
+                height: 320px;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+            }
+
+            .portfolio-box:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            }
+
+                .portfolio-box:hover img {
+                    transform: scale(1.05);
+                }
+
+        .portfolio-box-caption {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(30, 48, 243, 0.9), rgba(255, 33, 113, 0.9));
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .portfolio-box:hover .portfolio-box-caption {
+            opacity: 1;
+        }
+
+        .project-category {
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column h-100 bg-light">
+    <main class="flex-shrink-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 navbar-sticky">
+            <div class="container px-5">
+                <a class="navbar-brand" href="../index.html"><span class="text-gradient d-inline fw-bold fs-3">Chia Wei 個人網站</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link fs-5" href="../index.html">首頁</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="resume.html">履歷</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="special.html">特殊經歷</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5 text-primary" href="projects.html">專案</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="contact.html">聯絡我</a></li>
+                    </ul>
                 </div>
             </div>
-            
-            
+        </nav>
 
-            <div id="portfolio">
-                <div class="d-flex align-items-center justify-content-between mb-4">
-                    <a class="btn btn-primary px-4 py-3" href="https://drive.google.com/drive/folders/1JbeeVuk6B3HP4FRail-cwE7R47lLGsaQ?usp=sharing">
-                        <div class="d-inline-block bi bi-download me-2"></div>
-                        查看我的上課筆記
+        <div class="container px-3 my-5">
+            <div class="text-center mb-5" data-aos="fade-down" data-aos-duration="1000">
+                <h1 class="display-5 fw-bolder mb-3"><span class="text-gradient d-inline">學生與同事回饋</span></h1>
+                <p class="lead fw-light text-muted">用心的教學，收穫最真實的感動</p>
+
+                <div class="mt-4">
+                    <a class="btn btn-primary px-5 py-3 fs-6 fw-bold btn-hover-effect" href="https://drive.google.com/drive/folders/1JbeeVuk6B3HP4FRail-cwE7R47lLGsaQ?usp=sharing" target="_blank">
+                        <i class="bi bi-journal-text me-2"></i> 查看我的上課筆記
                     </a>
                 </div>
+            </div>
+        </div>
 
-                <div class="container-fluid p-0">
-                    <div class="row g-0">
-                        <div class="col-lg-4 col-sm-6">
-                                <a class="portfolio-box" href="../static/dist/assets/feedback/學生A.png" title="第一次上課後，被特別指定補課">
-                                    <img class="img-fluid" src="../static/dist/assets/feedback/學生A.png" alt="..." />
-                                    <div class="portfolio-box-caption">
-                                        <div class="project-category text-white-50"><font size="4">學生給予反饋</font></div>
-                                        <div class="project-name">國三數學</div>
-                                    </div>
-                                </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio-box" href="../static/dist/assets/feedback/學生B.png" title="這位學生喜歡我的開朗、創意上課模式">
-                                <img class="img-fluid" src="../static/dist/assets/feedback/學生B.png" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-category text-white-50"><font size="4">學生給予反饋</font></div>
-                                    <div class="project-name">國二數學</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio-box" href="../static/dist/assets/feedback/學生C.png" title="高中較成熟的學生也喜歡我的上課模式">
-                                <img class="img-fluid" src="../static/dist/assets/feedback/學生C.png" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-category text-white-50"><font size="4">學生給予反饋</font></div>
-                                    <div class="project-name">高一數學</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio-box" href="../static/dist/assets/feedback/學生D.png" title="在半學期的教導下，成績從70出進步至94">
-                                <img class="img-fluid" src="../static/dist/assets/feedback/學生D.png" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-category text-white-50"><font size="4">學生給予反饋</font></div>
-                                    <div class="project-name">國一生物</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio-box" href="../static/dist/assets/feedback/學生E.png" title="因材施教，並非所有人的理解力都快速">
-                                <img class="img-fluid" src="../static/dist/assets/feedback/學生E.png" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-category text-white-50"><font size="4">學生給予反饋</font></div>
-                                    <div class="project-name">國二英文</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio-box" href="../static/dist/assets/feedback/回饋1.png" title="離職後，收到學生以及同事的誇讚">
-                                <img class="img-fluid" src="../static/dist/assets/feedback/回饋1.png" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-category text-white-50"><font size="4">同事給予反饋</font></div>
-                                    <div class="project-name">同事轉達反饋</div>
-                                </div>
-                            </a>
-                        </div>
+        <div id="portfolio" class="pb-5">
+            <div class="container px-4">
+                <div class="row g-4 justify-content-center">
 
+                    <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="0">
+                        <a class="portfolio-box" href="../static/dist/assets/feedback/學生A.png" title="第一次上課後，被特別指定補課">
+                            <img src="../static/dist/assets/feedback/學生A.png" alt="學生回饋" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category">學生給予反饋</div>
+                                <div class="project-name">國三數學</div>
+                                <i class="bi bi-chat-quote-fill fs-2 mt-2"></i>
+                            </div>
+                        </a>
                     </div>
+
+                    <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                        <a class="portfolio-box" href="../static/dist/assets/feedback/學生B.png" title="這位學生喜歡我的開朗、創意上課模式">
+                            <img src="../static/dist/assets/feedback/學生B.png" alt="學生回饋" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category">學生給予反饋</div>
+                                <div class="project-name">國二數學</div>
+                                <i class="bi bi-emoji-smile-fill fs-2 mt-2"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                        <a class="portfolio-box" href="../static/dist/assets/feedback/學生C.png" title="高中較成熟的學生也喜歡我的上課模式">
+                            <img src="../static/dist/assets/feedback/學生C.png" alt="學生回饋" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category">學生給予反饋</div>
+                                <div class="project-name">高一數學</div>
+                                <i class="bi bi-hand-thumbs-up-fill fs-2 mt-2"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                        <a class="portfolio-box" href="../static/dist/assets/feedback/學生D.png" title="在半學期的教導下，成績從70出進步至94">
+                            <img src="../static/dist/assets/feedback/學生D.png" alt="學生回饋" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category">成績進步</div>
+                                <div class="project-name">國一生物</div>
+                                <i class="bi bi-graph-up-arrow fs-2 mt-2"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="400">
+                        <a class="portfolio-box" href="../static/dist/assets/feedback/學生E.png" title="因材施教，並非所有人的理解力都快速">
+                            <img src="../static/dist/assets/feedback/學生E.png" alt="學生回饋" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category">因材施教</div>
+                                <div class="project-name">國二英文</div>
+                                <i class="bi bi-heart-fill fs-2 mt-2"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="500">
+                        <a class="portfolio-box" href="../static/dist/assets/feedback/回饋1.png" title="離職後，收到學生以及同事的誇讚">
+                            <img src="../static/dist/assets/feedback/回饋1.png" alt="同事回饋" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category">同事給予反饋</div>
+                                <div class="project-name">職場肯定</div>
+                                <i class="bi bi-star-fill fs-2 mt-2"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="500">
+                        <a class="portfolio-box" href="../static/dist/assets/feedback/oneclass_feedback.png" title="教育方式讓家長與學生喜愛">
+                            <img src="../static/dist/assets/feedback/oneclass_feedback.png" alt="家長學生鼓勵" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category">家長學生鼓勵</div>
+                                <div class="project-name">高中數學</div>
+                                <i class="bi bi-heart-fill fs-2 mt-2"></i>
+                            </div>
+                        </a>
+                    </div>
+
                 </div>
             </div>
+        </div>
+    </main>
 
-        </main>
+    <footer class="bg-white py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-center text-center">
+                <div class="col-auto">
+                    <div class="small m-0 text-muted">Copyright &copy; Chia Wei 2026</div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="../static/dist/js/scripts2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
 
-        <!-- SimpleLightbox plugin JS-->
+    <script src="../static/dist/js/scripts2.js"></script>
 
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 400,
+            once: true,
+            offset: 50
+        });
+        
+        var lightbox = new SimpleLightbox('#portfolio a.portfolio-box', {
+            overlay: true,
+            docClose: true,
+            animationSpeed: 200,
+            preloading: true,
+            alertError: false
+        });
+    </script>
+</body>
 </html>

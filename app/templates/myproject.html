@@ -1,154 +1,214 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Chia Wei專案作品</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="../static/dist/assets/favicon.ico" />
-        <!-- Custom Google font-->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- SimpleLightbox plugin CSS-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../static/dist/css/styles2.css" rel="stylesheet" />
-        
-    </head>
-    <body class="d-flex flex-column h-100 bg-light">
-        <main class="flex-shrink-0">
-            <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-                <div class="container px-5">
-                    <a class="navbar-brand" href="../index.html"><span class="text-gradient d-inline"><b>Chia Wei個人網站</b></span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link" href="../index.html"><font size="5">首頁</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.html"><font size="5">履歷</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="special.html"><font size="5">特殊經歷</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html"><font size="5">專案</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html"><font size="5">聯絡我</font></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- Page Content-->
-            <div class="container px-3 my-5">
-                <div class="text-center mb-0">
-                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">專業相關作品<font size="2">  點擊照片有更多細節</font></span>  </h1>
-                </div>
-                <div class="row gx-2 justify-content-center">
-                    <div class="col-lg-11 col-xl-9 col-xxl-8">
-                        <div class="pb-2"></div>
-                    </div>
-                </div>
-            </div>
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Chia Wei 的專業相關作品集" />
+    <meta name="author" content="Chia Wei" />
+    <title>Chia Wei 專案作品</title>
+    <link rel="icon" type="image/x-icon" href="../static/dist/assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="../static/dist/css/styles2.css" rel="stylesheet" />
 
-            <div id="portfolio">
-                <div class="container-fluid p-0">
-                    <div class="row g-0">
-                        <div class="col-lg-4 col-sm-6">
-                            <a href="googlepatent.html" title="Google專利爬蟲抓關鍵字">
-                                <img class="img-fluid" src="../static/dist/assets/封面/googlepatent.png" alt="..." />
-                            </a>
-                                <div class="portfolio-box-caption">
-                                    <div class="text-center mb-3">
-                                        <div class="text-gradient d-inline"><font size="4"><b>Google專利爬蟲抓關鍵字</b></font></div>
-                                        
-                                    </div>
-                                   </div>
-                        </div>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-                        <div class="col-lg-4 col-sm-6">
-                            <a href="ppgpro.html" title="PPG專題演算法實現">
-                                <img class="img-fluid" src="../static/dist/assets/封面/ppg.png" alt="..." />
-                            </a>
-                                <div class="portfolio-box-caption">
-                                    <div class="text-center mb-3">
-                                        <div class="text-gradient d-inline"><font size="4"><b>PPG專題演算法實現</b></font></div>
-                                    </div>
-                                </div>
-                        </div>
+    <style>
+        .navbar-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+        }
 
-                        <div class="col-lg-4 col-sm-6">
-                            <a href="https://drive.google.com/drive/folders/1xQVJyOozSzD12SuLGmPeyclp5gBngHkC?usp=sharing" title="VLSI">
-                                <img class="img-fluid" src="../static/dist/assets/封面/layout基本邏輯閘.png" alt="..." />
-                            </a>
-                                <div class="portfolio-box-caption">
-                                    <div class="text-center mb-3">
-                                        <div class="text-gradient d-inline"><font size="4"><b>積體電路設計專案</b></font></div>
-                                    </div>
-                                </div>
-                        </div>
+        .project-box {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            background: #ffffff;
+            border: 1px solid rgba(0,0,0,0.08);
+            padding: 15px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-decoration: none;
+        }
 
-                        <div class="col-lg-4 col-sm-6">
-                            <a href="https://drive.google.com/drive/folders/1nuuS6c2V9xNN-lFl-8BzkoJZBvAG12Nx?usp=sharing" title="自學_AI機器學習">
-                                <img class="img-fluid" src="../static/dist/assets/封面/自學_AI機器學習.png" alt="..." />
-                            </a>
-                                <div class="portfolio-box-caption">
-                                    <div class="text-center mb-3">
-                                        <div class="text-gradient d-inline"><font size="4"><b>自學_AI機器學習</b></font></div>
-                                    </div>
-                                </div>
-                        </div>
+            .project-box img {
+                width: 100%;
+                height: 300px; 
+                object-fit: contain; 
+                transition: transform 0.5s ease;
+                border-radius: 8px;
+            }
 
-                        <div class="col-lg-4 col-sm-6">
-                            <a href="https://drive.google.com/drive/folders/1BHZzKYNUOzsYxX02UsD22UdpQjGHcZDj?usp=sharing" title="Verilog相關專業作品">
-                                <img class="img-fluid" src="../static/dist/assets/封面/Verilog.png" alt="..." />
-                            </a>
-                                <div class="portfolio-box-caption">
-                                    <div class="text-center mb-3">
-                                        <div class="text-gradient d-inline"><font size="4"><b>Verilog相關專業作品</b></font></div>
-                                    </div>
-                                </div>
-                        </div>
+            .project-box:hover {
+                transform: translateY(-8px); 
+                box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+                border-color: rgba(30, 48, 243, 0.3);
+            }
 
-                        <div class="col-lg-4 col-sm-6">
-                            <a href="https://drive.google.com/drive/folders/1xxVWXqkn9jV-Sv8zuiOwzx7SeUD6PVLa?usp=sharing" title="自學_AI圖形辨識">
-                                <img class="img-fluid" src="../static/dist/assets/封面/自學_AI圖形辨識.png" alt="..." />
-                            </a>
-                                <div class="portfolio-box-caption">
-                                    <div class="text-center mb-3">
-                                        <div class="text-gradient d-inline"><font size="4"><b>自學_AI圖形辨識</b></font></div>
-                                    </div>
-                                </div>
-                        </div>
+                .project-box:hover img {
+                    transform: scale(1.05); 
+                }
 
-                        <div class="col-lg-4 col-sm-6">
-                            <a href="https://drive.google.com/drive/folders/16RZP-T6PRtuctsrbsTpBMpvpLrNFnerX?usp=sharing" title="通訊系統實驗">
-                                <img class="img-fluid" src="../static/dist/assets/封面/通訊系統實驗.png" alt="..." />
-                            </a>
-                                <div class="portfolio-box-caption">
-                                    <div class="text-center mb-3">
-                                        <div class="text-gradient d-inline"><font size="4"><b>通訊系統實驗</b></font></div>
-                                    </div>
-                                </div>
-                        </div>
-                        
+        .project-box-caption {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(30, 48, 243, 0.9), rgba(255, 33, 113, 0.9));
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0; 
+            transition: opacity 0.3s ease;
+            border-radius: 15px; 
+        }
 
+        .project-box:hover .project-box-caption {
+            opacity: 1; 
+        }
 
+        .project-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
 
-                    </div>
+        .project-desc {
+            font-size: 0.9rem;
+            font-weight: 300;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column h-100 bg-light">
+    <main class="flex-shrink-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 navbar-sticky">
+            <div class="container px-5">
+                <a class="navbar-brand" href="../index.html"><span class="text-gradient d-inline fw-bold fs-3">Chia Wei 個人網站</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link fs-5" href="../index.html">首頁</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="resume.html">履歷</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="special.html">特殊經歷</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5 text-primary" href="projects.html">專案</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="contact.html">聯絡我</a></li>
+                    </ul>
                 </div>
             </div>
+        </nav>
 
-        </main>
+        <div class="container px-3 my-5">
+            <div class="text-center mb-5" data-aos="fade-down" data-aos-duration="1000">
+                <h1 class="display-5 fw-bolder mb-2"><span class="text-gradient d-inline">專業相關作品</span></h1>
+                <p class="lead fw-light text-muted">點擊卡片查看更多細節與程式碼</p>
+            </div>
+        </div>
 
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <div id="portfolio" class="pb-5">
+            <div class="container px-4">
+                <div class="row g-4 justify-content-center">
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="../static/dist/js/scripts2.js"></script>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                        <a class="project-box" href="googlepatent.html">
+                            <img src="../static/dist/assets/封面/googlepatent.png" alt="Google Patent Crawler" />
+                            <div class="project-box-caption">
+                                <div class="project-name">Google 專利爬蟲</div>
+                                <div class="project-desc">Python 關鍵字自動抓取</div>
+                                <i class="bi bi-arrow-right-circle fs-2 mt-2"></i>
+                            </div>
+                        </a>
+                    </div>
 
-        <!-- SimpleLightbox plugin JS-->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <a class="project-box" href="ppgpro.html">
+                            <img src="../static/dist/assets/封面/ppg.png" alt="PPG Algorithm" />
+                            <div class="project-box-caption">
+                                <div class="project-name">PPG 專題演算法</div>
+                                <div class="project-desc">訊號處理與實現</div>
+                                <i class="bi bi-arrow-right-circle fs-2 mt-2"></i>
+                            </div>
+                        </a>
+                    </div>
 
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <a class="project-box" href="https://drive.google.com/drive/folders/1xQVJyOozSzD12SuLGmPeyclp5gBngHkC?usp=sharing" target="_blank">
+                            <img src="../static/dist/assets/封面/layout基本邏輯閘.png" alt="VLSI Project" />
+                            <div class="project-box-caption">
+                                <div class="project-name">積體電路設計</div>
+                                <div class="project-desc">VLSI Layout 實作</div>
+                                <i class="bi bi-arrow-right-circle fs-2 mt-2"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <a class="project-box" href="https://drive.google.com/drive/folders/1nuuS6c2V9xNN-lFl-8BzkoJZBvAG12Nx?usp=sharing" target="_blank">
+                            <img src="../static/dist/assets/封面/自學_AI機器學習.png" alt="AI Machine Learning" />
+                            <div class="project-box-caption">
+                                <div class="project-name">AI 機器學習</div>
+                                <div class="project-desc">自學專案紀錄</div>
+                                <i class="bi bi-arrow-right-circle fs-2 mt-2"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <a class="project-box" href="https://drive.google.com/drive/folders/1BHZzKYNUOzsYxX02UsD22UdpQjGHcZDj?usp=sharing" target="_blank">
+                            <img src="../static/dist/assets/封面/Verilog.png" alt="Verilog Project" />
+                            <div class="project-box-caption">
+                                <div class="project-name">Verilog 設計</div>
+                                <div class="project-desc">硬體描述語言實作</div>
+                                <i class="bi bi-arrow-right-circle fs-2 mt-2"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                        <a class="project-box" href="https://drive.google.com/drive/folders/1xxVWXqkn9jV-Sv8zuiOwzx7SeUD6PVLa?usp=sharing" target="_blank">
+                            <img src="../static/dist/assets/封面/自學_AI圖形辨識.png" alt="AI Image Recognition" />
+                            <div class="project-box-caption">
+                                <div class="project-name">AI 圖形辨識</div>
+                                <div class="project-desc">影像處理模型</div>
+                                <i class="bi bi-arrow-right-circle fs-2 mt-2"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                        <a class="project-box" href="https://drive.google.com/drive/folders/16RZP-T6PRtuctsrbsTpBMpvpLrNFnerX?usp=sharing" target="_blank">
+                            <img src="../static/dist/assets/封面/通訊系統實驗.png" alt="Communication System" />
+                            <div class="project-box-caption">
+                                <div class="project-name">通訊系統實驗</div>
+                                <div class="project-desc">系統模擬與分析</div>
+                                <i class="bi bi-arrow-right-circle fs-2 mt-2"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/dist/js/scripts.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 400,
+            once: true,
+            offset: 50
+        });
+    </script>
+</body>
 </html>

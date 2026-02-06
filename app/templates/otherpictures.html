@@ -1,130 +1,219 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Chia Wei課外活動</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="../static/dist/assets/favicon.ico" />
-        <!-- Custom Google font-->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- SimpleLightbox plugin CSS-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../static/dist/css/styles2.css" rel="stylesheet" />
-        
-    </head>
-    <body class="d-flex flex-column h-100 bg-light">
-        <main class="flex-shrink-0">
-            <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-                <div class="container px-5">
-                    <a class="navbar-brand" href="../index.html"><span class="text-gradient d-inline"><b>Chia Wei個人網站</b></span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link" href="../index.html"><font size="5">首頁</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.html"><font size="5">履歷</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="special.html"><font size="5">特殊經歷</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html"><font size="5">專案</font></a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html"><font size="5">聯絡我</font></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- Page Content-->
-            <div class="container px-3 my-5">
-                <div class="text-center mb-0">
-                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">課外活動照片</span></h1>
-                </div>
-                <div class="row gx-2 justify-content-center">
-                    <div class="col-lg-11 col-xl-9 col-xxl-8">
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Chia Wei 課外活動照片集" />
+    <meta name="author" content="Chia Wei" />
+    <title>Chia Wei 課外活動</title>
+    <link rel="icon" type="image/x-icon" href="../static/dist/assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+    <link href="../static/dist/css/styles2.css" rel="stylesheet" />
 
-                        <div class="pb-2"></div>
-                    </div>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        .navbar-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+        }
+
+        .portfolio-box {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08); 
+            transition: all 0.3s ease;
+        }
+
+            .portfolio-box img {
+                width: 100%;
+                height: 400px;
+                object-fit: cover; 
+                transition: transform 0.5s ease;
+            }
+
+            .portfolio-box:hover {
+                transform: translateY(-5px); 
+                box-shadow: 0 15px 30px rgba(0,0,0,0.2); 
+            }
+
+                .portfolio-box:hover img {
+                    transform: scale(1.05); 
+                }
+
+        .portfolio-box-caption {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(30, 48, 243, 0.85), rgba(255, 33, 113, 0.85));
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .portfolio-box:hover .portfolio-box-caption {
+            opacity: 1; 
+        }
+
+        .project-category {
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .project-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column h-100 bg-light">
+    <main class="flex-shrink-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 navbar-sticky">
+            <div class="container px-5">
+                <a class="navbar-brand" href="../index.html"><span class="text-gradient d-inline fw-bold fs-3">Chia Wei 個人網站</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link fs-5" href="../index.html">首頁</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="resume.html">履歷</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="special.html">特殊經歷</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5 text-primary" href="projects.html">專案</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="contact.html">聯絡我</a></li>
+                    </ul>
                 </div>
             </div>
+        </nav>
 
-            <div id="portfolio">
-                <div class="container-fluid p-0">
-                    <div class="row g-0">
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="profile bg-gradient-primary-to-secondary">
-                                <a class="portfolio-box" href="../static/dist/assets/otherpicture/seven.jpg" title="大一上學期與三所學校聯合演出活動">
-                                    <img class="img-fluid" src="../static/dist/assets/otherpicture/seven.jpg" alt="..." />
-                                    <div class="portfolio-box-caption">
-                                        <div class="project-category text-white-50"><font size="4">社團活動</font></div>
-                                        <div class="project-name">樂團吉他手</div>
-                                    </div>
-                                </a>
+        <div class="container px-3 my-5">
+            <div class="text-center mb-5" data-aos="fade-down" data-aos-duration="1000">
+                <h1 class="display-5 fw-bolder mb-2"><span class="text-gradient d-inline">課外活動照片</span></h1>
+                <p class="lead fw-light text-muted">熱血社團 & 領導經驗紀錄</p>
+            </div>
+        </div>
+
+        <div id="portfolio" class="pb-5">
+            <div class="container px-4">
+                <div class="row g-4 justify-content-center">
+
+                    <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="0">
+                        <a class="portfolio-box" href="../static/dist/assets/otherpicture/seven.jpg" title="大一上學期與三所學校聯合演出活動">
+                            <img src="../static/dist/assets/otherpicture/seven.jpg" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category">社團活動</div>
+                                <div class="project-name">樂團吉他手</div>
+                                <i class="bi bi-music-note-beamed fs-2 mt-2"></i>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio-box" href="../static/dist/assets/otherpicture/電子工程系活動長.jpg" title="處理電子系內活動，並擔任總召的職位">
-                                <img class="img-fluid" src="../static/dist/assets/otherpicture/電子工程系活動長.jpg" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-category text-white-50"><font size="4">系學會活動</font></div>
-                                    <div class="project-name">電子系學會活動長</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio-box" href="../static/dist/assets/otherpicture/吉他社成發主唱.jpg" title="大一的期末公演擔任樂團主唱">
-                                <img class="img-fluid" src="../static/dist/assets/otherpicture/吉他社成發主唱.jpg" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-category text-white-50"><font size="4">社團活動</font></div>
-                                    <div class="project-name">樂團主唱</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio-box" href="../static/dist/assets/otherpicture/吉他社公演公關.png" title="邀請各校觀看演出以及擔任活動門面">
-                                <img class="img-fluid" src="../static/dist/assets/otherpicture/吉他社公演公關.png" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-category text-white-50"><font size="4">社團活動</font></div>
-                                    <div class="project-name">吉他社公演公關長</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio-box" href="../static/dist/assets/otherpicture/七校吉他社表演.jpg" title="大一下學期與七所學校舉辦演出">
-                                <img class="img-fluid" src="../static/dist/assets/otherpicture/七校吉他社表演.jpg" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-category text-white-50"><font size="4">社團活動</font></div>
-                                    <div class="project-name">樂團吉他手</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <a class="portfolio-box" href="../static/dist/assets/otherpicture/微積分比賽.jpg" title="在全校微積分競賽中獲取好成績，並獲得獎金。">
-                                <img class="img-fluid" src="../static/dist/assets/otherpicture/微積分比賽.jpg" alt="..." />
-                                <div class="portfolio-box-caption">
-                                    <div class="project-category text-white-50"><font size="4">校內競賽</font></div>
-                                    <div class="project-name">微積分競賽</div>
-                                </div>
-                            </a>
-                        </div>
+                        </a>
                     </div>
+
+                    <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                        <a class="portfolio-box" href="../static/dist/assets/otherpicture/電子工程系活動長.jpg" title="處理電子系內活動，並擔任總召的職位">
+                            <img src="../static/dist/assets/otherpicture/電子工程系活動長.jpg" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category">系學會活動</div>
+                                <div class="project-name">系學會活動長</div>
+                                <i class="bi bi-people-fill fs-2 mt-2"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                        <a class="portfolio-box" href="../static/dist/assets/otherpicture/吉他社成發主唱.jpg" title="大一的期末公演擔任樂團主唱">
+                            <img src="../static/dist/assets/otherpicture/吉他社成發主唱.jpg" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category">社團活動</div>
+                                <div class="project-name">樂團主唱</div>
+                                <i class="bi bi-mic-fill fs-2 mt-2"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                        <a class="portfolio-box" href="../static/dist/assets/otherpicture/吉他社公演公關.png" title="邀請各校觀看演出以及擔任活動門面">
+                            <img src="../static/dist/assets/otherpicture/吉他社公演公關.png" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category">社團幹部</div>
+                                <div class="project-name">吉他社公演公關長</div>
+                                <i class="bi bi-megaphone-fill fs-2 mt-2"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="400">
+                        <a class="portfolio-box" href="../static/dist/assets/otherpicture/七校吉他社表演.jpg" title="大一下學期與七所學校舉辦演出">
+                            <img src="../static/dist/assets/otherpicture/七校吉他社表演.jpg" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category">社團活動</div>
+                                <div class="project-name">七校聯合演出</div>
+                                <i class="bi bi-music-note-beamed fs-2 mt-2"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-delay="500">
+                        <a class="portfolio-box" href="../static/dist/assets/otherpicture/微積分比賽.jpg" title="在全校微積分競賽中獲取好成績，並獲得獎金。">
+                            <img src="../static/dist/assets/otherpicture/微積分比賽.jpg" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category">校內競賽</div>
+                                <div class="project-name">微積分競賽獲獎</div>
+                                <i class="bi bi-trophy-fill fs-2 mt-2"></i>
+                            </div>
+                        </a>
+                    </div>
+
                 </div>
             </div>
+        </div>
+    </main>
 
-        </main>
+    <footer class="bg-white py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-center text-center">
+                <div class="col-auto">
+                    <div class="small m-0 text-muted">Copyright &copy; Chia Wei 2026</div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="../static/dist/js/scripts2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
 
-        <!-- SimpleLightbox plugin JS-->
+    <script src="../static/dist/js/scripts2.js"></script>
 
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 450,
+            once: true,
+            offset: 50
+        });
+        
+        var lightbox = new SimpleLightbox('#portfolio a.portfolio-box', {
+            overlay: true,
+            docClose: true,  
+            animationSpeed: 200,
+            preloading: true,
+            alertError: false
+        });
+    </script>
+</body>
 </html>

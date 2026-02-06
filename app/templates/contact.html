@@ -31,16 +31,51 @@
             transition: transform 0.3s ease;
             background: transparent;
             border: none;
+            position: relative;
+        }
+
+        .img-wrapper {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 20px auto;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
         .contact-icon-img {
-            width: 140px; 
-            height: 140px;
-            object-fit: contain;
-            margin-bottom: 20px;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1)); 
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: filter 0.4s ease, transform 0.4s ease;
         }
+
+        .app-icon-overlay {
+            position: absolute;
+            top: 22%;
+            left: 22%;
+            transform: translate(-50%, -50%);
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border-radius: 18px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.4s ease;
+        }
+
+            .app-icon-overlay i {
+                font-size: 2.5rem;
+                background: linear-gradient(45deg, #1e30f3, #ff2171);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
 
         .contact-title {
             font-size: 1.6rem;
@@ -56,21 +91,27 @@
             font-weight: 500;
         }
 
-        .contact-item:hover {
-            transform: translateY(-10px); 
+        .contact-item:hover .img-wrapper {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(30, 48, 243, 0.2);
         }
 
-            .contact-item:hover .contact-icon-img {
-                transform: scale(1.15) rotate(5deg);
-                filter: drop-shadow(0 15px 30px rgba(30, 48, 243, 0.2)); 
-            }
+        .contact-item:hover .contact-icon-img {
+            filter: blur(3px);
+            transform: scale(1.1);
+        }
 
-            .contact-item:hover .contact-title {
+        .contact-item:hover .app-icon-overlay {
+            transform: translate(-50%, -50%) scale(1.2);
+            background: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
 
-                background: linear-gradient(45deg, #1e30f3, #ff2171);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
+        .contact-item:hover .contact-title {
+            background: linear-gradient(45deg, #1e30f3, #ff2171);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
 <body class="d-flex flex-column h-100 bg-light">
@@ -103,7 +144,12 @@
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
                         <a href="mailto:lingabi20021228@gmail.com" class="contact-item">
-                            <img class="contact-icon-img" src="../static/dist/assets/contact/mail.png" alt="Email" />
+                            <div class="img-wrapper">
+                                <img class="contact-icon-img" src="../static/dist/assets/contact/mail.jpg" alt="Email" />
+                                <div class="app-icon-overlay">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </div>
+                            </div>
                             <div class="contact-title">Email</div>
                             <div class="contact-subtitle">lingabi20021228@gmail.com</div>
                         </a>
@@ -111,7 +157,12 @@
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <a href="https://www.facebook.com/wc40112345/" target="_blank" class="contact-item">
-                            <img class="contact-icon-img" src="../static/dist/assets/contact/FB.png" alt="Facebook" />
+                            <div class="img-wrapper">
+                                <img class="contact-icon-img" src="../static/dist/assets/contact/FB.jpg" alt="Facebook" />
+                                <div class="app-icon-overlay">
+                                    <i class="bi bi-facebook"></i>
+                                </div>
+                            </div>
                             <div class="contact-title">Facebook</div>
                             <div class="contact-subtitle">關注我的社群動態</div>
                         </a>
@@ -119,7 +170,12 @@
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                         <a href="https://line.me/ti/p/jCOh932Ow4" target="_blank" class="contact-item">
-                            <img class="contact-icon-img" src="../static/dist/assets/contact/LINE.png" alt="LINE" />
+                            <div class="img-wrapper">
+                                <img class="contact-icon-img" src="../static/dist/assets/contact/LINE.jpg" alt="LINE" />
+                                <div class="app-icon-overlay">
+                                    <i class="bi bi-line"></i>
+                                </div>
+                            </div>
                             <div class="contact-title">LINE</div>
                             <div class="contact-subtitle">即時訊息聯繫</div>
                         </a>
@@ -127,7 +183,12 @@
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <a href="https://www.instagram.com/wei_122802/" target="_blank" class="contact-item">
-                            <img class="contact-icon-img" src="../static/dist/assets/contact/FB.png" alt="Instagram" />
+                            <div class="img-wrapper">
+                                <img class="contact-icon-img" src="../static/dist/assets/contact/IG.jpg" alt="Instagram" />
+                                <div class="app-icon-overlay">
+                                    <i class="bi bi-instagram"></i>
+                                </div>
+                            </div>
                             <div class="contact-title">Instagram</div>
                             <div class="contact-subtitle">生活與攝影</div>
                         </a>
@@ -135,7 +196,12 @@
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
                         <a href="https://github.com/wei122802/ICLAB2025_FALL/" target="_blank" class="contact-item">
-                            <img class="contact-icon-img" src="../static/dist/assets/contact/mail.png" alt="GitHub" />
+                            <div class="img-wrapper">
+                                <img class="contact-icon-img" src="../static/dist/assets/contact/Git.jpg" alt="GitHub" />
+                                <div class="app-icon-overlay">
+                                    <i class="bi bi-github"></i>
+                                </div>
+                            </div>
                             <div class="contact-title">GitHub</div>
                             <div class="contact-subtitle">程式碼與專案</div>
                         </a>
