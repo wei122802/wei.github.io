@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
     <link href="../static/dist/css/styles.css" rel="stylesheet" />
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -82,7 +82,7 @@
     <main class="flex-shrink-0">
         <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 navbar-sticky">
             <div class="container px-5">
-                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
     			<img src="../static/dist/assets/My_icon.png" 
          			alt="WEI Logo" 
          			style="height:65px; width:auto;">
@@ -91,8 +91,13 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item d-flex align-items-center gap-2 ms-lg-3 mt-2 mt-lg-0 order-lg-last">
+                            <button id="langToggle" type="button" class="btn btn-sm btn-outline-primary fw-bold px-2 py-1">EN</button>
+                            <button id="themeToggle" type="button" class="btn btn-sm btn-outline-secondary px-2 py-1" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i></button>
+                        </li>
                         <li class="nav-item"><a class="nav-link fs-5" href="../index.html">首頁</a></li>
                         <li class="nav-item"><a class="nav-link fs-5" href="resume.html">履歷</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="internship.html">實習經驗</a></li>
                         <li class="nav-item"><a class="nav-link fs-5" href="special.html">特殊經歷</a></li>
                         <li class="nav-item"><a class="nav-link fs-5 text-primary" href="projects.html">專案</a></li>
                         <li class="nav-item"><a class="nav-link fs-5" href="contact.html">聯絡我</a></li>
@@ -104,8 +109,9 @@
         <section class="py-5">
             <div class="container px-5 mb-5">
                 <div class="text-center mb-5" data-aos="fade-down" data-aos-duration="1000">
-                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">我的專案</span></h1>
-                    <p class="lead fw-light text-muted mt-2">學術研究、實作開發與課外活動紀錄</p>
+                    <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-code-square"></i></div>
+                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline" data-en="My Projects">我的專案</span></h1>
+                    <p class="lead fw-light text-muted mt-2" data-en="Academic research, hands-on development &amp; extracurriculars">學術研究、實作開發與課外活動紀錄</p>
                 </div>
 
                 <div class="row gx-5 justify-content-center">
@@ -117,11 +123,11 @@
                                     <div class="col-lg-6 p-5 d-flex align-items-center">
                                         <div>
                                             <div class="text-uppercase text-primary fw-bold mb-2">Academic Project</div>
-                                            <h2 class="fw-bolder">ICLAB 積體電路設計</h2>
-                                            <p class="mb-4">在 2025 年的 ICLAB 課程中，展現了扎實的數位 IC 設計能力。獲得全班第 33 名，最終成績 <span class="text-gradient fw-bold">A+</span>。我將每一個 LAB 的過程與程式碼完整記錄，傳承給未來的學弟妹。</p>
+                                            <h2 class="fw-bolder" data-en="ICLAB Integrated Circuit Design">ICLAB 積體電路設計</h2>
+                                            <p class="mb-4" data-en='In the 2025 ICLAB course, I demonstrated solid digital IC design ability, ranking 33rd in class with a final grade of <span class="text-gradient fw-bold">A+</span>. I fully documented every LAB and its code to pass on to future students.'>在 2025 年的 ICLAB 課程中，展現了扎實的數位 IC 設計能力。獲得全班第 33 名，最終成績 <span class="text-gradient fw-bold">A+</span>。我將每一個 LAB 的過程與程式碼完整記錄，傳承給未來的學弟妹。</p>
                                             <div class="mb-4">
                                                 <span class="tech-badge">Verilog</span>
-                                                <span class="tech-badge">數位IC</span>
+                                                <span class="tech-badge" data-en="Digital IC">數位IC</span>
                                                 <span class="tech-badge">EDA Tools</span>
                                                 <span class="tech-badge">APR</span>
                                             </div>
@@ -144,8 +150,8 @@
                                     <div class="col-lg-6 p-5 d-flex align-items-center">
                                         <div>
                                             <div class="text-uppercase text-primary fw-bold mb-2">Self-Learning & Dev</div>
-                                            <h2 class="fw-bolder">其他相關作品</h2>
-                                            <p class="mb-3">包含多元的技術實作：從專題演算法實現、Python 網路爬蟲（Google 專利與文章相似度分析），到 AI 文字辨識與 VLSI/Verilog 相關設計。</p>
+                                            <h2 class="fw-bolder" data-en="Other Related Works">其他相關作品</h2>
+                                            <p class="mb-3" data-en="A diverse set of technical work: from thesis algorithm implementation and Python web crawlers (Google Patents &amp; article-similarity analysis) to AI text recognition and VLSI/Verilog design.">包含多元的技術實作：從專題演算法實現、Python 網路爬蟲（Google 專利與文章相似度分析），到 AI 文字辨識與 VLSI/Verilog 相關設計。</p>
 
                                             <div class="mb-4">
                                                 <span class="tech-badge">Python</span>
@@ -173,14 +179,14 @@
                                     <div class="col-lg-6 p-5 d-flex align-items-center">
                                         <div>
                                             <div class="text-uppercase text-primary fw-bold mb-2">Extra-curricular</div>
-                                            <h2 class="fw-bolder">課外活動與領導</h2>
-                                            <p class="mb-4">除了學術，我也活躍於社團活動。曾擔任<b>電子工程系系學會活動長</b>、<b>吉他社公關長</b>。擁有豐富的舞台經驗，包括吉他手與主唱演出，培養了團隊合作與公眾表達能力。</p>
-                                            
+                                            <h2 class="fw-bolder" data-en="Extracurriculars &amp; Leadership">課外活動與領導</h2>
+                                            <p class="mb-4" data-en='Beyond academics, I was active in student clubs — serving as <b>Activities Officer of the EE Student Association</b> and <b>PR Officer of the Guitar Club</b>. With stage experience as a guitarist and vocalist, I built strong teamwork and public-speaking skills.'>除了學術，我也活躍於社團活動。曾擔任<b>電子工程系系學會活動長</b>、<b>吉他社公關長</b>。擁有豐富的舞台經驗，包括吉他手與主唱演出，培養了團隊合作與公眾表達能力。</p>
+
                                             <div class="mb-4">
-                                                <span class="tech-badge">活動長</span>
-                                                <span class="tech-badge">公關長</span>
-                                                <span class="tech-badge">團隊合作</span>
-                                                <span class="tech-badge">表達能力</span>
+                                                <span class="tech-badge" data-en="Activities Officer">活動長</span>
+                                                <span class="tech-badge" data-en="PR Officer">公關長</span>
+                                                <span class="tech-badge" data-en="Teamwork">團隊合作</span>
+                                                <span class="tech-badge" data-en="Communication">表達能力</span>
                                             </div>
 
                                         </div>
@@ -202,13 +208,13 @@
                                     <div class="col-lg-6 p-5 d-flex align-items-center">
                                         <div>
                                             <div class="text-uppercase text-primary fw-bold mb-2">Teaching Experience</div>
-                                            <h2 class="fw-bolder">補教講師經驗</h2>
-                                            <p class="mb-4">擁有接近兩年的數學講師經驗。我堅持不死板的教學風格，注重邏輯引導而非死記硬背。這段經歷讓我收穫了許多學生的正面回饋，也磨練了我的溝通與耐心。</p>
-                                            
+                                            <h2 class="fw-bolder" data-en="Cram-School Teaching">補教講師經驗</h2>
+                                            <p class="mb-4" data-en="Nearly two years of experience as a math tutor. I favor a flexible teaching style that emphasizes logical guidance over rote memorization. This experience earned positive feedback from many students and sharpened my communication and patience.">擁有接近兩年的數學講師經驗。我堅持不死板的教學風格，注重邏輯引導而非死記硬背。這段經歷讓我收穫了許多學生的正面回饋，也磨練了我的溝通與耐心。</p>
+
                                             <div class="mb-4">
-                                                <span class="tech-badge">極具耐心</span>
-                                                <span class="tech-badge">數學基礎</span>
-                                                <span class="tech-badge">溝通能力</span>
+                                                <span class="tech-badge" data-en="Very Patient">極具耐心</span>
+                                                <span class="tech-badge" data-en="Math Foundations">數學基礎</span>
+                                                <span class="tech-badge" data-en="Communication">溝通能力</span>
                                             </div>
 
                                         </div>
@@ -230,12 +236,12 @@
                                     <div class="col-lg-6 p-5 d-flex align-items-center">
                                         <div>
                                             <div class="text-uppercase text-primary fw-bold mb-2">Sales Experience</div>
-                                            <h2 class="fw-bolder">銷售與職場軟實力</h2>
-                                            <p class="mb-4">高中時期為了分擔家計，於軍品玩具店擔任門市人員。這份工作培養了我外向開朗的個性與應對進退的技巧，並於 2020 年獲得公司頒發<b>最佳銷售獎狀</b>肯定。</p>
-                                            
+                                            <h2 class="fw-bolder" data-en="Sales &amp; Workplace Soft Skills">銷售與職場軟實力</h2>
+                                            <p class="mb-4" data-en='In high school, I worked as a retail clerk at a military-goods toy store to help support my family. The job shaped my outgoing personality and interpersonal skills, and in 2020 I earned the <b>Best Sales Award</b> from the company.'>高中時期為了分擔家計，於軍品玩具店擔任門市人員。這份工作培養了我外向開朗的個性與應對進退的技巧，並於 2020 年獲得公司頒發<b>最佳銷售獎狀</b>肯定。</p>
+
                                             <div class="mb-4">
-                                                <span class="tech-badge">開朗個性</span>
-                                                <span class="tech-badge">思考說話邏輯</span>
+                                                <span class="tech-badge" data-en="Outgoing">開朗個性</span>
+                                                <span class="tech-badge" data-en="Logical Speaking">思考說話邏輯</span>
                                             </div>
 
                                         </div>
@@ -259,7 +265,7 @@
         <section class="py-5 bg-gradient-primary-to-secondary text-white">
             <div class="container px-5 my-5">
                 <div class="text-center" data-aos="zoom-in">
-                    <h2 class="display-4 fw-bolder mb-4">持續精進，更多作品開發中</h2>
+                    <h2 class="display-4 fw-bolder mb-4" data-en="Always improving — more works in progress">持續精進，更多作品開發中</h2>
                     <div class="fs-4 fw-light text-white-50 mb-4">To be continued...</div>
                 </div>
             </div>

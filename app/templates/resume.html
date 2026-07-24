@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
     <link href="../static/dist/css/styles.css" rel="stylesheet" />
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -31,15 +31,83 @@
         }
 
             .skill-badge:hover {
-                transform: scale(1.05); 
+                transform: scale(1.05);
             }
+
+        .open-to-work {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-weight: 800;
+            font-size: 0.8rem;
+            letter-spacing: 0.6px;
+            color: #16a34a;
+        }
+
+            .open-to-work .dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #22c55e;
+                animation: pulse-dot 1.8s infinite;
+            }
+
+        @keyframes pulse-dot {
+            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6); }
+            70% { box-shadow: 0 0 0 9px rgba(34, 197, 94, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+
+        .obj-pill {
+            display: inline-block;
+            padding: 0.45em 1em;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            background: rgba(30, 48, 243, 0.1);
+            color: #1e30f3;
+        }
+
+        .obj-pill-alt {
+            background: rgba(226, 30, 128, 0.1);
+            color: #e21e80;
+        }
+
+        .grade-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.9rem 1.1rem;
+            border-radius: 12px;
+            background: #f8f9fa;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+            .grade-item:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+            }
+
+        .grade-pill {
+            font-weight: 800;
+            font-size: 1rem;
+            padding: 0.25em 0.7em;
+            border-radius: 10px;
+            color: #fff;
+            flex-shrink: 0;
+            margin-left: 0.75rem;
+        }
+
+        .grade-aplus { background: linear-gradient(135deg, #1e30f3, #e21e80); }
+        .grade-a { background: #1e30f3; }
+        .grade-aminus { background: #6366f1; }
     </style>
 </head>
 <body class="d-flex flex-column h-100 bg-light">
     <main class="flex-shrink-0">
         <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 sticky-top shadow-sm">
             <div class="container px-5">
-                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
     			<img src="../static/dist/assets/My_icon.png" 
          			alt="WEI Logo" 
          			style="height:65px; width:auto;">
@@ -48,8 +116,13 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item d-flex align-items-center gap-2 ms-lg-3 mt-2 mt-lg-0 order-lg-last">
+                            <button id="langToggle" type="button" class="btn btn-sm btn-outline-primary fw-bold px-2 py-1">EN</button>
+                            <button id="themeToggle" type="button" class="btn btn-sm btn-outline-secondary px-2 py-1" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i></button>
+                        </li>
                         <li class="nav-item"><a class="nav-link fs-5" href="../index.html">首頁</a></li>
                         <li class="nav-item"><a class="nav-link fs-5 text-primary" href="resume.html">履歷</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="internship.html">實習經驗</a></li>
                         <li class="nav-item"><a class="nav-link fs-5" href="special.html">特殊經歷</a></li>
                         <li class="nav-item"><a class="nav-link fs-5" href="projects.html">專案</a></li>
                         <li class="nav-item"><a class="nav-link fs-5" href="contact.html">聯絡我</a></li>
@@ -59,8 +132,29 @@
         </nav>
 
         <div class="container px-5 my-5">
-            <div class="text-center mb-5" data-aos="fade-down">
-                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">履 歷</span></h1>
+            <div class="text-center mb-4" data-aos="fade-down">
+                <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-file-earmark-person-fill"></i></div>
+                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline" data-en="Resume">履 歷</span></h1>
+            </div>
+
+            <div class="row gx-5 justify-content-center mb-4">
+                <div class="col-lg-11 col-xl-9 col-xxl-8" data-aos="fade-up">
+                    <div class="card shadow border-0 rounded-4">
+                        <div class="card-body p-4">
+                            <div class="row align-items-center gx-4 gy-3">
+                                <div class="col-lg-auto text-center text-lg-start">
+                                    <div class="open-to-work mb-2"><span class="dot"></span><span data-en="OPEN TO WORK">OPEN TO WORK &middot; 求職中</span></div>
+                                    <div class="fw-bolder fs-5"><i class="bi bi-bullseye me-2 text-primary"></i><span data-en="Career Objective">求職目標</span></div>
+                                </div>
+                                <div class="col-lg text-center text-lg-end">
+                                    <span class="obj-pill mb-1" data-en="Digital Design (DD) · Full-time">數位 IC 設計 (DD) 正職</span>
+                                    <span class="obj-pill mb-1" data-en="Design Verification (DV) · Full-time">設計驗證 (DV) 正職</span>
+                                    <span class="obj-pill obj-pill-alt mb-1" data-en="R&amp;D Substitute Service">研發替代役</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="row gx-5 justify-content-center">
@@ -72,9 +166,9 @@
 
                     <section>
                         <div class="d-flex align-items-center justify-content-between mb-4" data-aos="fade-right">
-                            <h2 class="text-info fw-bolder mb-0"><i class="bi bi-mortarboard-fill me-2"></i>學歷</h2>
+                            <h2 class="text-info fw-bolder mb-0"><i class="bi bi-mortarboard-fill me-2"></i><span data-en="Education">學歷</span></h2>
                             <a class="btn btn-outline-primary px-4 py-3 fw-bold" href="../static/dist/assets/簡歷.pdf" download>
-                                <i class="bi bi-download me-2"></i>下載簡歷 PDF
+                                <i class="bi bi-download me-2"></i><span data-en="Download Resume PDF">下載簡歷 PDF</span>
                             </a>
                         </div>
 
@@ -83,18 +177,86 @@
                                 <div class="row align-items-center gx-5">
                                     <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
                                         <div class="bg-light p-4 rounded-4 text-center">
-                                            <div class="text-info fw-bolder mb-2">2025 - 至今</div>
-                                            <div class="small fw-bolder">國立陽明交通大學</div>
-                                            <div class="small text-muted">新竹市 東區</div>
-                                            <div class="fst-italic small text-primary mt-2">電子工程所 研究所</div>
+                                            <div class="text-info fw-bolder mb-2" data-en="2025 - Present">2025 - 至今</div>
+                                            <div class="small fw-bolder" data-en="Nat'l Yang Ming Chiao Tung Univ.">國立陽明交通大學</div>
+                                            <div class="small text-muted" data-en="East Dist., Hsinchu">新竹市 東區</div>
+                                            <div class="fst-italic small text-primary mt-2" data-en="M.S., Institute of Electronics">電子工程所 研究所</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-8">
                                         <ul class="list-unstyled mb-0">
-                                            <li class="mb-2"><i class="bi bi-person-badge me-2 text-info"></i>指導教授: 郭峻因 教授</li>
-                                            <li class="mb-2"><i class="bi bi-laptop me-2 text-info"></i>實驗室: iVsLab 智慧視覺系統設計實驗室</li>
+                                            <li class="mb-2"><i class="bi bi-person-badge me-2 text-info"></i><span data-en="Advisor: Prof. Jiun-In Guo">指導教授: 郭峻因 教授</span></li>
+                                            <li class="mb-2"><i class="bi bi-laptop me-2 text-info"></i><span data-en="Lab: iVsLab (Intelligent Vision System Design Lab)">實驗室: iVsLab 智慧視覺系統設計實驗室</span></li>
                                             <li><i class="bi bi-bar-chart-fill me-2 text-info"></i>GPA: 4.15 / 4.3</li>
                                         </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card shadow border-0 rounded-4 mb-5 hover-card" data-aos="fade-up">
+                            <div class="card-body p-5">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-journal-bookmark-fill"></i></div>
+                                    <div>
+                                        <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline" data-en="Graduate Core Course Grades">研究所核心課程成績</span></h3>
+                                        <div class="text-muted small" data-en="Digital IC design / verification coursework">數位 IC 設計 / 驗證 相關修課</div>
+                                    </div>
+                                </div>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="grade-item">
+                                            <div>
+                                                <div class="fw-bolder">Integrated Circuit Design Lab.</div>
+                                                <div class="small text-muted" data-en="ICLAB · IC Design Laboratory">ICLAB · 積體電路設計實驗</div>
+                                            </div>
+                                            <span class="grade-pill grade-aplus">A+</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="grade-item">
+                                            <div>
+                                                <div class="fw-bolder">VLSI Design and Implementation</div>
+                                                <div class="small text-muted" data-en="VLSI design &amp; implementation">超大型積體電路設計與實作</div>
+                                            </div>
+                                            <span class="grade-pill grade-aplus">A+</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="grade-item">
+                                            <div>
+                                                <div class="fw-bolder">Digital Integrated Circuits</div>
+                                                <div class="small text-muted" data-en="DIC · Digital Integrated Circuits">DIC · 數位積體電路</div>
+                                            </div>
+                                            <span class="grade-pill grade-a">A</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="grade-item">
+                                            <div>
+                                                <div class="fw-bolder">Digital Signal Processing</div>
+                                                <div class="small text-muted" data-en="DSP · Digital Signal Processing">DSP · 數位訊號處理</div>
+                                            </div>
+                                            <span class="grade-pill grade-a">A</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="grade-item">
+                                            <div>
+                                                <div class="fw-bolder">Memory Circuit and System Design</div>
+                                                <div class="small text-muted" data-en="Memory circuit &amp; system design">記憶體電路與系統設計</div>
+                                            </div>
+                                            <span class="grade-pill grade-a">A</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="grade-item">
+                                            <div>
+                                                <div class="fw-bolder">Computer Architecture</div>
+                                                <div class="small text-muted" data-en="Computer Architecture">計算機結構</div>
+                                            </div>
+                                            <span class="grade-pill grade-aminus">A-</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -106,15 +268,15 @@
                                     <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
                                         <div class="bg-light p-4 rounded-4 text-center">
                                             <div class="text-info fw-bolder mb-2">2021 - 2025</div>
-                                            <div class="small fw-bolder">國立臺北科技大學</div>
-                                            <div class="small text-muted">臺北市 大安區</div>
-                                            <div class="fst-italic small text-primary mt-2">電子工程系 學士</div>
+                                            <div class="small fw-bolder" data-en="Nat'l Taipei Univ. of Technology">國立臺北科技大學</div>
+                                            <div class="small text-muted" data-en="Da'an Dist., Taipei">臺北市 大安區</div>
+                                            <div class="fst-italic small text-primary mt-2" data-en="B.S., Electronic Engineering">電子工程系 學士</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-8">
-                                        <div class="mb-3"><span class="badge bg-primary me-2">大一</span>擔任社團公關長，兼顧社團活動與學業。</div>
-                                        <div class="mb-3"><span class="badge bg-primary me-2">大二</span>擔任系學會活動長，成績榮獲全系 <span class="text-gradient fw-bold">前三名</span>。</div>
-                                        <div class="mb-0"><span class="badge bg-primary me-2">大三</span>專注專題研究與實習，學業成績 <span class="text-gradient fw-bold">全系第一名</span>。</div>
+                                        <div class="mb-3" data-en='<span class="badge bg-primary me-2">Year 1</span>Served as club PR officer, balancing club activities with studies.'><span class="badge bg-primary me-2">大一</span>擔任社團公關長，兼顧社團活動與學業。</div>
+                                        <div class="mb-3" data-en='<span class="badge bg-primary me-2">Year 2</span>Served as Student Association Activities Officer; ranked <span class="text-gradient fw-bold">top 3</span> in the department.'><span class="badge bg-primary me-2">大二</span>擔任系學會活動長，成績榮獲全系 <span class="text-gradient fw-bold">前三名</span>。</div>
+                                        <div class="mb-0" data-en='<span class="badge bg-primary me-2">Year 3</span>Focused on capstone research and an internship; ranked <span class="text-gradient fw-bold">No.1 in the department</span> academically.'><span class="badge bg-primary me-2">大三</span>專注專題研究與實習，學業成績 <span class="text-gradient fw-bold">全系第一名</span>。</div>
                                     </div>
                                 </div>
                             </div>
@@ -126,17 +288,17 @@
                                     <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
                                         <div class="bg-light p-4 rounded-4 text-center">
                                             <div class="text-info fw-bolder mb-2">2018 - 2021</div>
-                                            <div class="small fw-bolder">國立彰師附工</div>
-                                            <div class="small text-muted">彰化縣 彰化市</div>
-                                            <div class="fst-italic small text-primary mt-2">資訊科</div>
+                                            <div class="small fw-bolder" data-en="Affiliated Vocational HS, NCUE">國立彰師附工</div>
+                                            <div class="small text-muted" data-en="Changhua City">彰化縣 彰化市</div>
+                                            <div class="fst-italic small text-primary mt-2" data-en="Information Technology Dept.">資訊科</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-8">
-                                        <p>鑽研 C++ 及 8051 單晶片控制，擅長電子學、數位邏輯等專業科目。</p>
+                                        <p data-en="Studied C++ and 8051 microcontroller programming; strong in electronics and digital logic.">鑽研 C++ 及 8051 單晶片控制，擅長電子學、數位邏輯等專業科目。</p>
                                         <div class="d-flex gap-2 flex-wrap">
-                                            <span class="badge rounded-pill bg-success">專業科目一 100分</span>
-                                            <span class="badge rounded-pill bg-success">數學 96分</span>
-                                            <span class="badge rounded-pill bg-secondary">毅力與決心</span>
+                                            <span class="badge rounded-pill bg-success" data-en="Major Subject I: 100">專業科目一 100分</span>
+                                            <span class="badge rounded-pill bg-success" data-en="Math: 96">數學 96分</span>
+                                            <span class="badge rounded-pill bg-secondary" data-en="Perseverance">毅力與決心</span>
                                         </div>
                                     </div>
                                 </div>
@@ -145,7 +307,30 @@
                     </section>
 
                     <section>
-                        <h2 class="text-primary fw-bolder mb-4 mt-5" data-aos="fade-right"><i class="bi bi-briefcase-fill me-2"></i>就職經驗</h2>
+                        <div class="d-flex align-items-center justify-content-between mb-4 mt-5" data-aos="fade-right">
+                            <h2 class="text-primary fw-bolder mb-0"><i class="bi bi-briefcase-fill me-2"></i><span data-en="Work &amp; Internship">就職 & 實習經驗</span></h2>
+                            <a class="btn btn-outline-primary px-4 py-2 fw-bold" href="internship.html">
+                                <i class="bi bi-buildings me-2"></i><span data-en="Internship Details">實習經驗詳情</span>
+                            </a>
+                        </div>
+
+                        <div class="card shadow border-0 rounded-4 mb-5 hover-card" data-aos="flip-up">
+                            <div class="card-body p-5">
+                                <div class="row align-items-center gx-5">
+                                    <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="bg-light p-4 rounded-4 text-center">
+                                            <div class="text-primary fw-bolder mb-2">2026/7 ~ 2026/9</div>
+                                            <div class="fw-bolder" data-en="Realtek Semiconductor">瑞昱半導體</div>
+                                            <div class="small text-muted" data-en="Summer Intern · System Design Dept.">暑期實習生 · 系統設計部門</div>
+                                            <div class="small text-muted fst-italic mt-1"><i class="bi bi-geo-alt-fill"></i> <span data-en="Hsinchu Science Park">新竹科學園區</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <p class="mb-0" data-en='As a summer intern in the <b>System Design Department</b> of the <b>Communication Network Business Group</b>, I develop <b>automation test tools for FPGA and ASIC</b>, connecting hands-on to the digital IC design &amp; verification (DV) flow and strengthening hardware-verification and scripting integration.'>於<b>通訊網路事業群</b>的<b>系統設計部門</b>擔任暑期實習生，負責<b>開發 FPGA 與 ASIC 的自動化測試工具</b>，實務接軌數位 IC 設計與驗證 (DV) 流程，強化硬體驗證與 Scripting 整合能力。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="card shadow border-0 rounded-4 mb-5 hover-card" data-aos="flip-up">
                             <div class="card-body p-5">
@@ -153,13 +338,13 @@
                                     <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
                                         <div class="bg-light p-4 rounded-4 text-center">
                                             <div class="text-primary fw-bolder mb-2">2024/7 ~ 2024/9</div>
-                                            <div class="fw-bolder">臻鼎科技</div>
-                                            <div class="small text-muted">資訊科技助理工程師</div>
-                                            <div class="small text-muted fst-italic mt-1"><i class="bi bi-geo-alt-fill"></i> 廣東省 深圳市</div>
+                                            <div class="fw-bolder" data-en="Zhen Ding Technology">臻鼎科技</div>
+                                            <div class="small text-muted" data-en="IT Assistant Engineer">資訊科技助理工程師</div>
+                                            <div class="small text-muted fst-italic mt-1"><i class="bi bi-geo-alt-fill"></i> <span data-en="Shenzhen, Guangdong">廣東省 深圳市</span></div>
                                         </div>
                                     </div>
                                     <div class="col-lg-8">
-                                        <p class="mb-0">於<b>深圳</b>的暑期實習，透過 ERP 系統深入了解世界市佔第一的 PCB 企業運作核心。不僅體驗了深圳文化，更深入掌握了 <b>PCB 產業</b> 的需求實現與職場生態。</p>
+                                        <p class="mb-0" data-en='A summer internship in <b>Shenzhen</b> where, through an ERP system, I gained deep insight into the operations of the world No.1 PCB company. Beyond experiencing the local culture, I grasped the requirement fulfillment and workplace dynamics of the <b>PCB industry</b>.'>於<b>深圳</b>的暑期實習，透過 ERP 系統深入了解世界市佔第一的 PCB 企業運作核心。不僅體驗了深圳文化，更深入掌握了 <b>PCB 產業</b> 的需求實現與職場生態。</p>
                                     </div>
                                 </div>
                             </div>
@@ -171,13 +356,13 @@
                                     <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
                                         <div class="bg-light p-4 rounded-4 text-center">
                                             <div class="text-primary fw-bolder mb-2">2024/9 ~ 2025/8</div>
-                                            <div class="fw-bolder">萬通教育</div>
-                                            <div class="small text-muted">高中數學講師</div>
-                                            <div class="small text-muted fst-italic mt-1"><i class="bi bi-camera-video-fill"></i> 遠距教學</div>
+                                            <div class="fw-bolder" data-en="Wan Tong Education">萬通教育</div>
+                                            <div class="small text-muted" data-en="High-School Math Instructor">高中數學講師</div>
+                                            <div class="small text-muted fst-italic mt-1"><i class="bi bi-camera-video-fill"></i> <span data-en="Remote / Online">遠距教學</span></div>
                                         </div>
                                     </div>
                                     <div class="col-lg-8">
-                                        一對一高中數學講師，善用邏輯推理能力協助學生突破盲點，並針對個人需求調整教學步調。
+                                        <span data-en="One-on-one high-school math instructor; used logical reasoning to help students overcome blind spots and tailored the pace to each student's needs.">一對一高中數學講師，善用邏輯推理能力協助學生突破盲點，並針對個人需求調整教學步調。</span>
                                     </div>
                                 </div>
                             </div>
@@ -189,13 +374,13 @@
                                     <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
                                         <div class="bg-light p-4 rounded-4 text-center">
                                             <div class="text-primary fw-bolder mb-2">2023/7 ~ 2025/2</div>
-                                            <div class="fw-bolder">敦翰文理補習班</div>
-                                            <div class="small text-muted">高職數學 C 講師</div>
-                                            <div class="small text-muted fst-italic mt-1"><i class="bi bi-geo-alt-fill"></i> 新北市 三重區</div>
+                                            <div class="fw-bolder" data-en="Dun Han Cram School">敦翰文理補習班</div>
+                                            <div class="small text-muted" data-en="Vocational Math C Instructor">高職數學 C 講師</div>
+                                            <div class="small text-muted fst-italic mt-1"><i class="bi bi-geo-alt-fill"></i> <span data-en="Sanchong Dist., New Taipei">新北市 三重區</span></div>
                                         </div>
                                     </div>
                                     <div class="col-lg-8">
-                                        一對多教學模式。學會如何<b>有條理、有邏輯</b>地描述數學公式與解題思路。擔任講師讓我深入了解新課綱教學內容，確保教學與時俱進。
+                                        <span data-en='One-to-many teaching. I learned to explain math formulas and problem-solving approaches <b>clearly and logically</b>. Teaching deepened my understanding of the new curriculum and kept my instruction up to date.'>一對多教學模式。學會如何<b>有條理、有邏輯</b>地描述數學公式與解題思路。擔任講師讓我深入了解新課綱教學內容，確保教學與時俱進。</span>
                                     </div>
                                 </div>
                             </div>
@@ -207,13 +392,13 @@
                                     <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
                                         <div class="bg-light p-4 rounded-4 text-center">
                                             <div class="text-primary fw-bolder mb-2">2022/9~2023/7</div>
-                                            <div class="fw-bolder">明光義塾</div>
-                                            <div class="small text-muted">國高中數學講師</div>
-                                            <div class="small text-muted fst-italic mt-1"><i class="bi bi-geo-alt-fill"></i> 臺北市 大安區</div>
+                                            <div class="fw-bolder" data-en="Meiko Gijuku">明光義塾</div>
+                                            <div class="small text-muted" data-en="Junior / High-School Math Instructor">國高中數學講師</div>
+                                            <div class="small text-muted fst-italic mt-1"><i class="bi bi-geo-alt-fill"></i> <span data-en="Da'an Dist., Taipei">臺北市 大安區</span></div>
                                         </div>
                                     </div>
                                     <div class="col-lg-8">
-                                        上課內容為<b>高中數學</b>以及國中小全科目。講課時會應用自己國高中所歸納的筆記上課，教學方式深受學生喜歡。
+                                        <span data-en='Covered <b>high-school math</b> plus all junior-high and elementary subjects. I taught using notes I compiled myself, and my teaching style was well liked by students.'>上課內容為<b>高中數學</b>以及國中小全科目。講課時會應用自己國高中所歸納的筆記上課，教學方式深受學生喜歡。</span>
                                     </div>
                                 </div>
                             </div>
@@ -222,18 +407,18 @@
                     </section>
 
                     <section>
-                        <h2 class="text-secondary fw-bolder mb-4 mt-5" data-aos="fade-right"><i class="bi bi-patch-check-fill me-2"></i>證照</h2>
+                        <h2 class="text-secondary fw-bolder mb-4 mt-5" data-aos="fade-right"><i class="bi bi-patch-check-fill me-2"></i><span data-en="Certifications">證照</span></h2>
 
                         <div class="card shadow border-0 rounded-4 mb-5 hover-card" data-aos="fade-left">
                             <div class="card-body p-4">
                                 <div class="row align-items-center gx-5">
                                     <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
                                         <div class="bg-light p-4 rounded-4">
-                                            <div class="text-secondary fw-bolder mb-2 fs-5">電腦硬體裝修乙級</div>
-                                            <div class="small text-muted mb-2">民國 110 年 5 月</div>
+                                            <div class="text-secondary fw-bolder mb-2 fs-5" data-en="Computer Hardware Repair — Class B">電腦硬體裝修乙級</div>
+                                            <div class="small text-muted mb-2" data-en="May 2021">民國 110 年 5 月</div>
                                             <div class="d-flex flex-wrap gap-2">
-                                                <span class="badge bg-secondary bg-opacity-10 text-secondary border border-secondary">Server 架設</span>
-                                                <span class="badge bg-secondary bg-opacity-10 text-secondary border border-secondary">網頁設計</span>
+                                                <span class="badge bg-secondary bg-opacity-10 text-secondary border border-secondary" data-en="Server Setup">Server 架設</span>
+                                                <span class="badge bg-secondary bg-opacity-10 text-secondary border border-secondary" data-en="Web Design">網頁設計</span>
                                             </div>
                                         </div>
                                     </div>
@@ -253,22 +438,22 @@
                                 <div class="mb-5">
                                     <div class="d-flex align-items-center mb-4">
                                         <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-cpu"></i></div>
-                                        <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">專業技能</span></h3>
+                                        <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline" data-en="Skills">專業技能</span></h3>
                                     </div>
                                     <div class="row row-cols-1 row-cols-md-3 g-4">
-                                        <div class="col"><div class="d-flex align-items-center justify-content-center bg-light border border-primary text-primary fw-bold rounded-pill p-3 skill-badge">數位 IC 設計</div></div>
+                                        <div class="col"><div class="d-flex align-items-center justify-content-center bg-light border border-primary text-primary fw-bold rounded-pill p-3 skill-badge" data-en="Digital IC Design">數位 IC 設計</div></div>
                                         <div class="col"><div class="d-flex align-items-center justify-content-center bg-light border border-primary text-primary fw-bold rounded-pill p-3 skill-badge">EDA Tools</div></div>
-                                        <div class="col"><div class="d-flex align-items-center justify-content-center bg-light border border-primary text-primary fw-bold rounded-pill p-3 skill-badge">邏輯推理</div></div>
-                                        <div class="col"><div class="d-flex align-items-center justify-content-center bg-light border border-primary text-primary fw-bold rounded-pill p-3 skill-badge">社交能力</div></div>
-                                        <div class="col"><div class="d-flex align-items-center justify-content-center bg-light border border-primary text-primary fw-bold rounded-pill p-3 skill-badge">團隊合作</div></div>
-                                        <div class="col"><div class="d-flex align-items-center justify-content-center bg-light border border-primary text-primary fw-bold rounded-pill p-3 skill-badge">高抗壓力</div></div>
+                                        <div class="col"><div class="d-flex align-items-center justify-content-center bg-light border border-primary text-primary fw-bold rounded-pill p-3 skill-badge" data-en="Logical Reasoning">邏輯推理</div></div>
+                                        <div class="col"><div class="d-flex align-items-center justify-content-center bg-light border border-primary text-primary fw-bold rounded-pill p-3 skill-badge" data-en="Social Skills">社交能力</div></div>
+                                        <div class="col"><div class="d-flex align-items-center justify-content-center bg-light border border-primary text-primary fw-bold rounded-pill p-3 skill-badge" data-en="Teamwork">團隊合作</div></div>
+                                        <div class="col"><div class="d-flex align-items-center justify-content-center bg-light border border-primary text-primary fw-bold rounded-pill p-3 skill-badge" data-en="High Stress Tolerance">高抗壓力</div></div>
                                     </div>
                                 </div>
 
                                 <div class="mb-0">
                                     <div class="d-flex align-items-center mb-4">
                                         <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-code-slash"></i></div>
-                                        <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">程式語言 & 工具</span></h3>
+                                        <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline" data-en="Languages &amp; Tools">程式語言 & 工具</span></h3>
                                     </div>
                                     <div class="row row-cols-2 row-cols-md-4 g-3 text-center">
                                         <div class="col"><span class="badge bg-dark p-3 w-100 fs-6 skill-badge">Verilog</span></div>

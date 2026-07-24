@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
     <link href="static/dist/css/styles.css" rel="stylesheet" />
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -51,6 +51,51 @@
                 transform: translateY(-3px);
                 box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             }
+
+        .objective-card {
+            background: #ffffff;
+            border: 1px solid rgba(30, 48, 243, 0.15);
+            box-shadow: 0 8px 24px rgba(30, 48, 243, 0.08);
+        }
+
+        .open-to-work {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-weight: 800;
+            font-size: 0.78rem;
+            letter-spacing: 0.6px;
+            color: #16a34a;
+        }
+
+            .open-to-work .dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #22c55e;
+                animation: pulse-dot 1.8s infinite;
+            }
+
+        @keyframes pulse-dot {
+            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6); }
+            70% { box-shadow: 0 0 0 9px rgba(34, 197, 94, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+
+        .obj-pill {
+            display: inline-block;
+            padding: 0.4em 0.9em;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            background: rgba(30, 48, 243, 0.1);
+            color: #1e30f3;
+        }
+
+        .obj-pill-alt {
+            background: rgba(226, 30, 128, 0.1);
+            color: #e21e80;
+        }
     </style>
 </head>
 <body class="d-flex flex-column h-100">
@@ -66,8 +111,13 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item d-flex align-items-center gap-2 ms-lg-3 mt-2 mt-lg-0 order-lg-last">
+                            <button id="langToggle" type="button" class="btn btn-sm btn-outline-primary fw-bold px-2 py-1">EN</button>
+                            <button id="themeToggle" type="button" class="btn btn-sm btn-outline-secondary px-2 py-1" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i></button>
+                        </li>
                         <li class="nav-item"><a class="nav-link fs-5 text-primary" href="index.html">首頁</a></li>
                         <li class="nav-item"><a class="nav-link fs-5" href="templates/resume.html">履歷</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="templates/internship.html">實習經驗</a></li>
                         <li class="nav-item"><a class="nav-link fs-5" href="templates/special.html">特殊經歷</a></li>
                         <li class="nav-item"><a class="nav-link fs-5" href="templates/projects.html">專案</a></li>
                         <li class="nav-item"><a class="nav-link fs-5" href="templates/contact.html">聯絡我</a></li>
@@ -82,20 +132,30 @@
                     <div class="col-xxl-5">
                         <div class="text-center text-xxl-start" data-aos="fade-right" data-aos-duration="1000">
                             <div class="badge bg-gradient-primary-to-secondary text-white mb-4">
-                                <div class="text-uppercase fw-bold p-1 fs-6">
+                                <div class="text-uppercase fw-bold p-1 fs-6" data-en="NYCU &middot; Institute of Electronics &middot; iVsLab &middot; Digital IC Design">
                                     國立陽明交通大學 &middot; 電子研究所 iVsLab &middot; 數位IC設計
                                 </div>
                             </div>
-                            <div class="fs-4 fw-light text-muted mb-2">與其自怨自艾，不如更加努力!</div>
-                            <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">林佳葦</span></h1>
+                            <div class="fs-4 fw-light text-muted mb-2" data-en="Work harder, rather than complain!">與其自怨自艾，不如更加努力!</div>
+                            <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline" data-en="Chia-Wei Lin">林佳葦</span></h1>
 
-                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
+                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-4">
                                 <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder btn-hover-lift" href="templates/resume.html">
-                                    <i class="bi bi-file-earmark-person me-2"></i>查看履歷
+                                    <i class="bi bi-file-earmark-person me-2"></i><span data-en="View Resume">查看履歷</span>
                                 </a>
                                 <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder btn-hover-lift" href="templates/projects.html">
-                                    <i class="bi bi-code-square me-2"></i>專案作品
+                                    <i class="bi bi-code-square me-2"></i><span data-en="Projects">專案作品</span>
                                 </a>
+                            </div>
+
+                            <div class="objective-card p-3 rounded-4 d-inline-block text-start">
+                                <div class="open-to-work mb-2"><span class="dot"></span><span data-en="OPEN TO WORK">OPEN TO WORK &middot; 求職中</span></div>
+                                <div class="fw-bold mb-2"><i class="bi bi-bullseye me-2 text-primary"></i><span data-en="Looking for">正在尋找</span></div>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="obj-pill" data-en="Digital Design (DD) · Full-time">數位 IC 設計 (DD) 正職</span>
+                                    <span class="obj-pill" data-en="Design Verification (DV) · Full-time">設計驗證 (DV) 正職</span>
+                                    <span class="obj-pill obj-pill-alt" data-en="R&amp;D Substitute Service">研發替代役</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -216,22 +276,59 @@
             </div>
         </header>
 
+        <section class="py-4 py-lg-5 bg-white border-top border-bottom">
+            <div class="container px-5">
+                <div class="row g-4 justify-content-center stats-band">
+                    <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="bi bi-mortarboard-fill"></i></div>
+                            <div class="stat-num" data-target="4.15" data-decimals="2">4.15</div>
+                            <div class="stat-label" data-en="Graduate GPA (of 4.3)">研究所 GPA（滿分 4.3）</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="bi bi-award-fill"></i></div>
+                            <div class="stat-num" data-target="3" data-decimals="0">3</div>
+                            <div class="stat-label" data-en="Dean's List Awards">書卷獎次數</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="bi bi-cpu-fill"></i></div>
+                            <div class="stat-num">A+</div>
+                            <div class="stat-label" data-en="ICLAB / VLSI Grade">ICLAB / VLSI 成績</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="bi bi-buildings-fill"></i></div>
+                            <div class="stat-num" data-target="2" data-decimals="0">2</div>
+                            <div class="stat-label" data-en="Internships (Realtek / Zhen Ding)">實習經歷（瑞昱 / 臻鼎）</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="bg-light py-5" id="about">
             <div class="container px-5">
                 <div class="row gx-5 justify-content-center">
                     <div class="col-xxl-8">
                         <div class="text-center my-5" data-aos="fade-up" data-aos-duration="1000">
-                            <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">關於我</span></h2>
+                            <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline" data-en="About Me">關於我</span></h2>
 
                             <div class="card shadow-sm border-0 rounded-4 mt-4 p-4">
                                 <div class="card-body">
-                                    <p class="lead fw-light mb-4">
+                                    <p class="lead fw-light mb-4" data-en="Hello, I'm Chia-Wei Lin — outgoing, optimistic and proactive, and skilled at communication, collaboration and teamwork. I enjoy logical reasoning and specialize in digital IC design, earning an A+ in ICLAB 2025. I am currently interning at Realtek Semiconductor, developing FPGA / ASIC automation test tools.">
                                         哈囉~ 我是<b>林佳葦</b>，個性開朗、樂觀積極，善於溝通交流與團隊合作。<br />
-                                        享受邏輯推導過程，擅長<b>數位 IC 設計</b>，並於 2025 的 ICLAB 中獲得 <span class="text-gradient fw-bold">A+</span> 成績。
+                                        享受邏輯推導過程，擅長<b>數位 IC 設計</b>，並於 2025 的 ICLAB 中獲得 <span class="text-gradient fw-bold">A+</span> 成績。<br />
+                                        現於<b>瑞昱半導體</b>實習，開發 FPGA / ASIC 自動化測試工具。
                                     </p>
-                                    <p class="text-muted fst-italic">
+                                    <p class="text-muted fst-italic" data-en="">
                                         Hello, I'm Chia-Wei Lin. I have an outgoing, optimistic, and proactive personality, and I am skilled at communication, collaboration, and teamwork.<br />
-                                        I enjoy the process of logical reasoning and problem-solving, and my primary expertise lies in digital IC design. I achieved an A+ grade in ICLAB 2025.
+                                        I enjoy the process of logical reasoning and problem-solving, and my primary expertise lies in digital IC design. I achieved an A+ grade in ICLAB 2025.<br />
+                                        Currently interning at Realtek Semiconductor, developing FPGA / ASIC automation test tools.
                                     </p>
                                 </div>
                             </div>

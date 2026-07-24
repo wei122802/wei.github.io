@@ -11015,3 +11015,63 @@ header.masthead h1, header.masthead .h1 {
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
   opacity: 0.75;
 }
+/* ============================================================
+   Site enhancements (appended 2026-07): dark mode, stats band,
+   toggle buttons. Shared across styles.css / styles2.css.
+   ============================================================ */
+
+/* ---- Navbar toggle buttons ---- */
+#themeToggle, #langToggle { transition: all .25s ease; line-height: 1; }
+#langToggle { min-width: 44px; }
+#themeToggle i { font-size: 1rem; }
+
+/* ---- Stats band (homepage) ---- */
+.stats-band .stat-card {
+    background: #ffffff;
+    border: 1px solid rgba(30, 48, 243, .12);
+    border-radius: 18px;
+    padding: 1.6rem 1rem;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0 8px 24px rgba(30, 48, 243, .06);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+.stats-band .stat-card:hover { transform: translateY(-6px); box-shadow: 0 16px 32px rgba(30, 48, 243, .12); }
+.stats-band .stat-icon {
+    font-size: 1.9rem; margin-bottom: .4rem;
+    background: linear-gradient(45deg, #1e30f3, #e21e80);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.stats-band .stat-num {
+    font-size: 2.5rem; font-weight: 800; line-height: 1;
+    background: linear-gradient(45deg, #1e30f3, #e21e80);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.stats-band .stat-label { color: #6c757d; font-weight: 600; font-size: .92rem; margin-top: .45rem; }
+
+/* ---- Dark mode ---- */
+body.dark-mode { background-color: #0e1016 !important; color: #e6e8ef; }
+body.dark-mode .bg-light { background-color: #151824 !important; }
+body.dark-mode .bg-white { background-color: #161a26 !important; }
+body.dark-mode .navbar.bg-white { background-color: #12151f !important; border-bottom: 1px solid rgba(255,255,255,.06); }
+body.dark-mode .card { background-color: #161a26; color: #e6e8ef; }
+body.dark-mode .card .bg-light { background-color: #1e2334 !important; }
+body.dark-mode .text-muted { color: #9aa1b8 !important; }
+body.dark-mode .text-dark { color: #e6e8ef !important; }
+body.dark-mode p, body.dark-mode li, body.dark-mode span:not(.text-gradient):not([class*="text-"]) { color: inherit; }
+body.dark-mode .btn-outline-dark { color: #e6e8ef; border-color: #5b627a; }
+body.dark-mode .btn-outline-dark:hover { background: #e6e8ef; color: #12151f; }
+body.dark-mode .nav-link { color: #c4c9db !important; }
+body.dark-mode .nav-link.text-primary { color: #6f7dff !important; }
+body.dark-mode .nav-link:hover { color: #ffffff !important; }
+body.dark-mode .border { border-color: rgba(255,255,255,.12) !important; }
+body.dark-mode footer.bg-white { background-color: #12151f !important; }
+body.dark-mode .objective-card { background: #161a26; border-color: rgba(111,125,255,.25); }
+body.dark-mode .grade-item { background: #1e2334; }
+body.dark-mode .stats-band .stat-card { background: #161a26; border-color: rgba(111,125,255,.2); }
+body.dark-mode .stats-band .stat-label { color: #9aa1b8; }
+body.dark-mode .portfolio-box { background: #161a26 !important; border-color: rgba(255,255,255,.08); }
+body.dark-mode .contact-title { color: #e6e8ef; }
+body.dark-mode .realtek-photo { background: #161a26; }
+body.dark-mode .shadow, body.dark-mode .shadow-sm, body.dark-mode .shadow-lg { box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.5) !important; }
+body.dark-mode .badge.bg-light { background-color: #1e2334 !important; }

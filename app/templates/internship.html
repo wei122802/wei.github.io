@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Chia Wei 的實習經驗 - 瑞昱半導體、臻鼎科技" />
+    <meta name="author" content="Chia Wei" />
+    <title>Chia Wei 實習經驗</title>
+    <link rel="icon" type="image/x-icon" href="../static/dist/assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+    <link href="../static/dist/css/styles.css" rel="stylesheet" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        .navbar-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+        }
+
+        .hover-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .hover-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+            }
+
+        /* 直式時間軸 */
+        .timeline {
+            position: relative;
+            padding-left: 0;
+        }
+
+        .intern-tag {
+            font-size: 0.85rem;
+            padding: 0.4em 0.9em;
+            margin: 0 0.4rem 0.5rem 0;
+            border-radius: 20px;
+            background-color: rgba(30, 48, 243, 0.1);
+            color: #1e30f3;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .live-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+
+            .live-badge .dot {
+                width: 9px;
+                height: 9px;
+                border-radius: 50%;
+                background: #22c55e;
+                box-shadow: 0 0 0 rgba(34, 197, 94, 0.6);
+                animation: pulse-dot 1.8s infinite;
+            }
+
+        @keyframes pulse-dot {
+            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6); }
+            70% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+
+        /* Realtek 特色面板（無照片時的漂亮圖示區） */
+        .intern-visual {
+            background: linear-gradient(135deg, #1e30f3, #e21e80);
+            border-radius: 18px;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .intern-visual .big-icon {
+                font-size: 5rem;
+                line-height: 1;
+                margin-bottom: 1rem;
+                filter: drop-shadow(0 6px 12px rgba(0,0,0,0.2));
+            }
+
+            .intern-visual .chip-row {
+                display: flex;
+                gap: 1.5rem;
+                font-size: 2rem;
+                opacity: 0.9;
+                margin-top: 0.5rem;
+            }
+
+        .realtek-photo {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 22px rgba(30, 48, 243, 0.12);
+            background: #fff;
+        }
+
+            .realtek-photo img {
+                display: block;
+                width: 100%;
+                height: auto;
+                aspect-ratio: 4 / 3;
+                object-fit: cover;
+            }
+
+        .intern-photo {
+            display: block;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+            .intern-photo img {
+                width: 100%;
+                height: 220px;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+            }
+
+            .intern-photo:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 14px 28px rgba(0,0,0,0.2);
+            }
+
+            .intern-photo:hover img {
+                transform: scale(1.06);
+            }
+
+        .cert-photo img {
+            object-fit: contain;
+            background: #f8f9fa;
+        }
+
+        .company-badge {
+            width: 70px;
+            height: 70px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #fff;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column h-100 bg-light">
+    <main class="flex-shrink-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 navbar-sticky">
+            <div class="container px-5">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+    			<img src="../static/dist/assets/My_icon.png"
+         			alt="WEI Logo"
+         			style="height:65px; width:auto;">
+    			<span class="text-gradient d-inline fw-bold fs-3">Chia Wei 個人網站</span>
+		</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item d-flex align-items-center gap-2 ms-lg-3 mt-2 mt-lg-0 order-lg-last">
+                            <button id="langToggle" type="button" class="btn btn-sm btn-outline-primary fw-bold px-2 py-1">EN</button>
+                            <button id="themeToggle" type="button" class="btn btn-sm btn-outline-secondary px-2 py-1" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i></button>
+                        </li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="../index.html">首頁</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="resume.html">履歷</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5 text-primary" href="internship.html">實習經驗</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="special.html">特殊經歷</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="projects.html">專案</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="contact.html">聯絡我</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container px-4 my-5">
+            <div class="text-center mb-5" data-aos="fade-down" data-aos-duration="1000">
+                <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-buildings"></i></div>
+                <h1 class="display-5 fw-bolder mb-2"><span class="text-gradient d-inline" data-en="Internship Experience">實習經驗</span></h1>
+                <p class="lead fw-light text-muted mb-0" data-en="From semiconductor design verification to global manufacturing — hands-on industry experience">從半導體設計驗證到跨國製造，累積產業實戰經驗</p>
+            </div>
+
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-11 col-xl-10 col-xxl-9">
+
+                    <!-- ============ 瑞昱半導體（特色 / 進行中）============ -->
+                    <section class="mb-5">
+                        <div class="d-flex align-items-center mb-4" data-aos="fade-right">
+                            <h2 class="text-primary fw-bolder mb-0"><i class="bi bi-cpu-fill me-2"></i><span data-en="Semiconductor IC Internship">半導體 IC 實習</span></h2>
+                        </div>
+
+                        <div class="card shadow border-0 rounded-4 overflow-hidden hover-card" data-aos="fade-up">
+                            <div class="card-body p-4 p-lg-5">
+                                <div class="row gx-5 align-items-center">
+                                    <div class="col-lg-7">
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div class="company-badge bg-gradient-primary-to-secondary"><i class="bi bi-cpu"></i></div>
+                                            <div>
+                                                <h3 class="fw-bolder mb-0">瑞昱半導體股份有限公司</h3>
+                                                <div class="text-muted">Realtek Semiconductor Corp.</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+                                            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary px-3 py-2"><i class="bi bi-calendar3 me-1"></i>2026/7 ~ 2026/9</span>
+                                            <span class="badge bg-light text-muted border px-3 py-2"><i class="bi bi-geo-alt-fill me-1"></i><span data-en="Hsinchu Science Park">新竹科學園區</span></span>
+                                            <span class="live-badge text-success"><span class="dot"></span><span data-en="Internship in progress">實習進行中</span></span>
+                                        </div>
+
+                                        <div class="fw-bold fs-5 mb-2" data-en="Summer Intern · System Design Dept., Communication Network Business Group">暑期實習生 · 通訊網路事業群 系統設計部門</div>
+                                        <p class="mb-3" data-en='As a summer intern in the <b>System Design Department</b> of the <b>Communication Network Business Group</b>, I develop <b>automation test tools for FPGA and ASIC</b>, helping the engineering team improve the efficiency and stability of the chip-verification flow.'>
+                                            於<b>通訊網路事業群 (Communication Network Business Group)</b> 的<b>系統設計部門</b>擔任暑期實習生，
+                                            負責<b>開發 FPGA 與 ASIC 的自動化測試工具</b>，協助工程團隊提升晶片驗證流程的效率與穩定度。
+                                        </p>
+
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="mb-2" data-en='<i class="bi bi-check-circle-fill text-primary me-2"></i>Designed and developed <b>automation test tools</b> for FPGA / ASIC, cutting the time cost of repetitive manual verification.'><i class="bi bi-check-circle-fill text-primary me-2"></i>設計並開發 FPGA / ASIC 的<b>自動化測試 (Automation Test) 工具</b>，減少人工重複驗證的時間成本。</li>
+                                            <li class="mb-2" data-en='<i class="bi bi-check-circle-fill text-primary me-2"></i>Worked on real projects in the System Design Dept., learning the full chip flow from design to verification (DV).'><i class="bi bi-check-circle-fill text-primary me-2"></i>參與系統設計部門的實際專案，了解晶片從設計到驗證 (DV) 的完整開發流程。</li>
+                                            <li class="mb-0" data-en='<i class="bi bi-check-circle-fill text-primary me-2"></i>Strengthened integration of scripting and hardware verification, connecting directly to digital IC design and verification work.'><i class="bi bi-check-circle-fill text-primary me-2"></i>強化 Scripting 與硬體驗證整合能力，實務接軌數位 IC 設計與驗證工作。</li>
+                                        </ul>
+
+                                        <div>
+                                            <span class="intern-tag">FPGA</span>
+                                            <span class="intern-tag">ASIC</span>
+                                            <span class="intern-tag">Design Verification</span>
+                                            <span class="intern-tag" data-en="Automation Test">自動化測試</span>
+                                            <span class="intern-tag">System Design</span>
+                                            <span class="intern-tag">Python / Scripting</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-5 mt-4 mt-lg-0">
+                                        <!-- 照片牆：日後把照片放進 assets/Realtek/ 後，替換下方 img 的 src 即可 -->
+                                        <div class="realtek-photo mb-2">
+                                            <img src="../static/dist/assets/Realtek/placeholder.svg" alt="瑞昱實習照片（待更新）" /> 
+                                        </div>
+                                        <div class="text-muted small text-center"><i class="bi bi-camera me-1"></i><span data-en="Internship photos coming soon">實習照片將陸續更新</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ============ 臻鼎科技（深圳）============ -->
+                    <section class="mb-5">
+                        <div class="d-flex align-items-center mb-4" data-aos="fade-right">
+                            <h2 class="text-secondary fw-bolder mb-0"><i class="bi bi-globe-asia-australia me-2"></i><span data-en="Overseas Manufacturing Internship">海外製造業實習</span></h2>
+                        </div>
+
+                        <div class="card shadow border-0 rounded-4 overflow-hidden hover-card" data-aos="fade-up">
+                            <div class="card-body p-4 p-lg-5">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <div class="company-badge" style="background:linear-gradient(135deg,#e21e80,#1e30f3);"><i class="bi bi-diagram-3-fill"></i></div>
+                                    <div>
+                                        <h3 class="fw-bolder mb-0">臻鼎科技控股股份有限公司</h3>
+                                        <div class="text-muted" data-en="Zhen Ding Technology · World's No.1 PCB maker">Zhen Ding Technology · 全球 PCB 市佔第一</div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+                                    <span class="badge bg-secondary bg-opacity-10 text-secondary border border-secondary px-3 py-2"><i class="bi bi-calendar3 me-1"></i>2024/7 ~ 2024/9</span>
+                                    <span class="badge bg-light text-muted border px-3 py-2"><i class="bi bi-geo-alt-fill me-1"></i><span data-en="Shenzhen, Guangdong, China">中國 廣東省 深圳市</span></span>
+                                </div>
+
+                                <div class="fw-bold fs-5 mb-2" data-en="IT Division · Assistant Engineer (Summer Intern)">資訊科技處 助理工程師（暑期實習）</div>
+                                <p class="mb-4" data-en='A two-month overseas summer internship in <b>Shenzhen</b>. By deploying and operating an <b>ERP system</b>, I gained deep insight into the operations of the world No.1 PCB company. Besides experiencing Shenzhen&apos;s industry culture, I learned requirement analysis and process digitalization in the <b>PCB industry</b>, and built cross-cultural communication and resilience.'>
+                                    於<b>深圳</b>進行為期兩個月的海外暑期實習，透過導入與操作 <b>ERP 系統</b>，
+                                    深入了解全球 PCB 市佔第一企業的營運核心。除了體驗深圳的產業文化與職場生態，
+                                    也實際掌握了 <b>PCB 產業</b> 的需求分析與流程數位化，培養了跨文化溝通與抗壓能力。
+                                </p>
+
+                                <div class="mb-4">
+                                    <span class="intern-tag" style="background:rgba(226,30,128,.1);color:#e21e80;" data-en="ERP System">ERP 系統</span>
+                                    <span class="intern-tag" style="background:rgba(226,30,128,.1);color:#e21e80;" data-en="PCB Industry">PCB 產業</span>
+                                    <span class="intern-tag" style="background:rgba(226,30,128,.1);color:#e21e80;" data-en="Process Digitalization">流程數位化</span>
+                                    <span class="intern-tag" style="background:rgba(226,30,128,.1);color:#e21e80;" data-en="Cross-cultural Communication">跨文化溝通</span>
+                                </div>
+
+                                <!-- 照片牆 -->
+                                <div class="row g-3" id="sz-gallery">
+                                    <div class="col-6 col-md-3">
+                                        <a class="intern-photo" href="../static/dist/assets/SZ/8840c763ad30fa8857f8113996eed4b8.JPG" title="深圳實習 · 臻鼎科技">
+                                            <img src="../static/dist/assets/SZ/8840c763ad30fa8857f8113996eed4b8.JPG" alt="深圳實習照片" />
+                                        </a>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <a class="intern-photo" href="../static/dist/assets/SZ/1cfb974c3j89851d49e4ca680a7b597e.jfif" title="深圳實習 · 臻鼎科技">
+                                            <img src="../static/dist/assets/SZ/1cfb974c3j89851d49e4ca680a7b597e.jfif" alt="深圳實習照片" />
+                                        </a>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <a class="intern-photo" href="../static/dist/assets/SZ/39370249et258e6a9b56b3ae7f235af1.jfif" title="深圳實習 · 臻鼎科技">
+                                            <img src="../static/dist/assets/SZ/39370249et258e6a9b56b3ae7f235af1.jfif" alt="深圳實習照片" />
+                                        </a>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <a class="intern-photo cert-photo" href="../static/dist/assets/獎狀/實習證明.jpg" title="臻鼎實習證明">
+                                            <img src="../static/dist/assets/獎狀/實習證明.jpg" alt="臻鼎實習證明" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="text-muted small mt-2"><i class="bi bi-hand-index me-1"></i><span data-en="Click a photo to enlarge">點擊照片可放大檢視</span></div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ============ 實習收穫 ============ -->
+                    <section>
+                        <div class="card shadow border-0 rounded-4 bg-gradient-primary-to-secondary text-white" data-aos="zoom-in-up">
+                            <div class="card-body p-4 p-lg-5 text-center">
+                                <h3 class="fw-bolder mb-3" data-en="What My Internships Taught Me">實習帶給我的成長</h3>
+                                <div class="row g-4 mt-1">
+                                    <div class="col-md-4">
+                                        <div class="fs-1"><i class="bi bi-cpu"></i></div>
+                                        <div class="fw-bold mt-2" data-en="Industry Practice">產業實戰</div>
+                                        <div class="small text-white-50" data-en="Semiconductor verification × manufacturing digitalization">半導體驗證 × 製造業數位化</div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="fs-1"><i class="bi bi-tools"></i></div>
+                                        <div class="fw-bold mt-2" data-en="Tool Development">工具開發</div>
+                                        <div class="small text-white-50" data-en="Automation testing × process optimization">自動化測試 × 流程優化</div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="fs-1"><i class="bi bi-people"></i></div>
+                                        <div class="fw-bold mt-2" data-en="Cross-domain Communication">跨域溝通</div>
+                                        <div class="small text-white-50" data-en="Cross-department × cross-border teamwork">跨部門 × 跨國團隊合作</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-center text-center">
+                <div class="col-auto">
+                    <div class="small m-0 text-muted">Copyright &copy; Chia Wei 2026</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <script src="../static/dist/js/scripts.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 400,
+            once: true,
+            offset: 80
+        });
+
+        var lightbox = new SimpleLightbox('#sz-gallery a.intern-photo', {
+            overlay: true,
+            docClose: true,
+            animationSpeed: 200,
+            preloading: true,
+            alertError: false
+        });
+    </script>
+</body>
+</html>
