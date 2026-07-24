@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Chia Wei 的研究所專案 - Memory Circuits & VLSI Design" />
+    <meta name="author" content="Chia Wei" />
+    <title>Chia Wei 研究所專案</title>
+    <link rel="icon" type="image/x-icon" href="../static/dist/assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="../static/dist/css/styles.css" rel="stylesheet" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        .navbar-sticky {
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+        }
+
+        .hover-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .hover-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+            }
+
+        .gp-tag {
+            font-size: 0.85rem;
+            padding: 0.4em 0.9em;
+            margin: 0 0.4rem 0.5rem 0;
+            border-radius: 20px;
+            background-color: rgba(30, 48, 243, 0.1);
+            color: #1e30f3;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .gp-tag-alt { background: rgba(226, 30, 128, .1); color: #e21e80; }
+
+        .gp-visual {
+            background: linear-gradient(135deg, #1e30f3, #e21e80);
+            border-radius: 18px;
+            min-height: 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+        }
+
+            .gp-visual .big-icon { font-size: 4.5rem; line-height: 1; margin-bottom: .75rem; filter: drop-shadow(0 6px 12px rgba(0,0,0,.2)); }
+            .gp-visual .chip-row { display: flex; gap: 1.4rem; font-size: 1.8rem; opacity: .9; margin-top: .6rem; }
+
+        .company-badge {
+            width: 64px; height: 64px; border-radius: 16px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem; color: #fff; flex-shrink: 0;
+        }
+
+        .lab-item {
+            border-left: 3px solid #1e30f3;
+            padding: 0.35rem 0 0.35rem 1rem;
+            margin-bottom: 0.9rem;
+        }
+            .lab-item .lab-name { font-weight: 700; }
+
+        .gp-table th, .gp-table td { vertical-align: middle; }
+        .rank-badge {
+            background: linear-gradient(45deg, #1e30f3, #e21e80);
+            color: #fff; font-weight: 700; border-radius: 8px; padding: .15em .55em; font-size: .85rem;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column h-100 bg-light">
+    <main class="flex-shrink-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 navbar-sticky">
+            <div class="container px-5">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+    			<img src="../static/dist/assets/My_icon.png" alt="WEI Logo" style="height:65px; width:auto;">
+    			<span class="text-gradient d-inline fw-bold fs-3">Chia Wei 個人網站</span>
+		</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item d-flex align-items-center gap-2 ms-lg-3 mt-2 mt-lg-0 order-lg-last">
+                            <button id="langToggle" type="button" class="btn btn-sm btn-outline-primary fw-bold px-2 py-1">EN</button>
+                            <button id="themeToggle" type="button" class="btn btn-sm btn-outline-secondary px-2 py-1" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i></button>
+                        </li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="../index.html">首頁</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="resume.html">履歷</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="internship.html">實習經驗</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="special.html">特殊經歷</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5 text-primary" href="projects.html">專案</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5" href="contact.html">聯絡我</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container px-4 my-5">
+            <div class="text-center mb-5" data-aos="fade-down" data-aos-duration="1000">
+                <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-cpu-fill"></i></div>
+                <h1 class="display-5 fw-bolder mb-2"><span class="text-gradient d-inline" data-en="Graduate Projects">研究所專案</span></h1>
+                <p class="lead fw-light text-muted mb-0" data-en="Two hardware-design course projects: Memory circuits and VLSI implementation">兩門硬體設計核心課程專案：記憶體電路 與 超大型積體電路實作</p>
+                <div class="mt-3">
+                    <a class="btn btn-outline-primary px-3 py-2" href="projects.html"><i class="bi bi-arrow-left me-2"></i><span data-en="Back to Projects">回專案列表</span></a>
+                </div>
+            </div>
+
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-11 col-xl-10 col-xxl-9">
+
+                    <!-- ============ Memory Circuits & Systems ============ -->
+                    <section class="mb-5">
+                        <div class="card shadow border-0 rounded-4 overflow-hidden hover-card" data-aos="fade-up">
+                            <div class="card-body p-4 p-lg-5">
+                                <div class="row gx-5 align-items-center">
+                                    <div class="col-lg-7">
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div class="company-badge bg-gradient-primary-to-secondary"><i class="bi bi-memory"></i></div>
+                                            <div>
+                                                <h3 class="fw-bolder mb-0">Memory Circuits &amp; Systems</h3>
+                                                <div class="text-muted" data-en="Memory Circuits and System Design · Grade A">記憶體電路與系統設計 · 成績 A</div>
+                                            </div>
+                                        </div>
+
+                                        <p class="mb-3" data-en="Circuit design of SRAM and DRAM under advanced process nodes (7nm / 22nm FinFET), including peripheral control circuits and system-level simulation of a memory controller.">聚焦於先進製程 (7nm / 22nm FinFET) 下 SRAM 與 DRAM 的電路設計、周邊控制電路實作，以及記憶體控制器的系統級模擬分析。</p>
+
+                                        <div class="lab-item">
+                                            <div class="lab-name">Lab 1 · SRAM Static Noise Margin</div>
+                                            <div class="small text-muted" data-en="7nm FinFET SRAM cell stability — SNM / RSNM / WNM, Butterfly-curve extraction in Python, LPE post-sim.">7nm FinFET SRAM Cell 穩定度分析：SNM / RSNM / WNM，Python 自動萃取 Butterfly Curve 與 LPE 後模擬。</div>
+                                        </div>
+                                        <div class="lab-item">
+                                            <div class="lab-name">Lab 2 · 6-to-64 Row Decoder</div>
+                                            <div class="small text-muted" data-en="1GHz row decoder driving 64 real SRAM cells (7nm wire loading); HSPICE netlists auto-generated with Python.">1GHz 6-to-64 列解碼器，考慮 64 顆 SRAM 真實負載；以 Python 自動生成 HSPICE Netlist 分析 Delay / Power。</div>
+                                        </div>
+                                        <div class="lab-item">
+                                            <div class="lab-name">Lab 3 · Sensing Amplifier</div>
+                                            <div class="small text-muted" data-en="Voltage- vs current-mode sense amplifiers; Monte Carlo analysis of Vth mismatch on read correctness.">比較 Voltage-mode 與 Current-mode 感測放大器，以 Monte Carlo 分析 Vth 變異對讀取正確率的影響。</div>
+                                        </div>
+                                        <div class="lab-item">
+                                            <div class="lab-name">Lab 4 · DRAM Differential Sense Amplifier</div>
+                                            <div class="small text-muted" data-en="22nm 1T1C DRAM array read/write with parasitic RC; extracted timing parameters (tRCD, tRAS, tRP).">22nm 1T1C DRAM 陣列讀寫，結合寄生 RC 負載，萃取核心時序參數 (tRCD, tRAS, tRP)。</div>
+                                        </div>
+                                        <div class="lab-item">
+                                            <div class="lab-name">Lab 5 · Ramulator 2.0 DRAM Controller</div>
+                                            <div class="small text-muted" data-en="Cycle-level C++ simulator; studied address mapping and open- vs close-row policies on bandwidth.">C++ Cycle-level 模擬器：探討 Address Mapping 與 Open/Close-row Policy 對頻寬與 Row Conflict 的影響。</div>
+                                        </div>
+                                        <div class="lab-item">
+                                            <div class="lab-name">Final · 2kb Full-custom SRAM</div>
+                                            <div class="small text-muted" data-en="Full-custom 128×16 (2kb) SRAM: clock buffer tree, column MUX, precharge, sense amp, write driver — self-timed at 1GHz.">全客製化 128×16 (2kb) SRAM：Clock Buffer Tree、Column MUX、Precharge、Sense Amp、Write Driver，1GHz Self-timed 驗證。</div>
+                                        </div>
+
+                                        <div class="mt-4">
+                                            <span class="gp-tag">SRAM</span>
+                                            <span class="gp-tag">DRAM</span>
+                                            <span class="gp-tag">7nm / 22nm FinFET</span>
+                                            <span class="gp-tag">HSPICE</span>
+                                            <span class="gp-tag">Monte Carlo</span>
+                                            <span class="gp-tag">Ramulator 2.0</span>
+                                            <span class="gp-tag">Python</span>
+                                        </div>
+
+                                        <a class="btn btn-dark px-4 py-2 mt-4 fw-bold" href="https://github.com/wei122802/Memory-Circuits-and-System" target="_blank">
+                                            <i class="bi bi-github me-2"></i><span data-en="View on GitHub">GitHub 詳細內容</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-lg-5 mt-4 mt-lg-0">
+                                        <div class="gp-visual">
+                                            <div class="big-icon"><i class="bi bi-memory"></i></div>
+                                            <div class="fw-bold fs-4">SRAM / DRAM</div>
+                                            <div class="fw-light" data-en="Circuit &amp; System Design">電路與系統設計</div>
+                                            <div class="chip-row">
+                                                <i class="bi bi-diagram-3"></i>
+                                                <i class="bi bi-grid-3x3"></i>
+                                                <i class="bi bi-graph-up"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ============ VLSI Design and Implementation ============ -->
+                    <section class="mb-5">
+                        <div class="card shadow border-0 rounded-4 overflow-hidden hover-card" data-aos="fade-up">
+                            <div class="card-body p-4 p-lg-5">
+                                <div class="row gx-5 align-items-center">
+                                    <div class="col-lg-5 order-lg-last mb-4 mb-lg-0">
+                                        <div class="gp-visual">
+                                            <div class="big-icon"><i class="bi bi-cpu"></i></div>
+                                            <div class="fw-bold fs-4">Verilog RTL</div>
+                                            <div class="fw-light" data-en="PPA Optimization · A+ (92)">PPA 效能優化 · A+ (92 分)</div>
+                                            <div class="chip-row">
+                                                <i class="bi bi-code-slash"></i>
+                                                <i class="bi bi-clock-history"></i>
+                                                <i class="bi bi-lightning-charge"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-7">
+                                        <div class="d-flex align-items-center gap-3 mb-3">
+                                            <div class="company-badge" style="background:linear-gradient(135deg,#e21e80,#1e30f3);"><i class="bi bi-cpu"></i></div>
+                                            <div>
+                                                <h3 class="fw-bolder mb-0">VLSI Design &amp; Implementation</h3>
+                                                <div class="text-muted" data-en="VLSI Design and Implementation · Grade A+ (92)">超大型積體電路設計與實作 · 成績 A+ (92 分)</div>
+                                            </div>
+                                        </div>
+
+                                        <p class="mb-3" data-en="From matrix operations to latch-based memory and error detection — a journey emphasizing PPA (Power, Performance, Area) optimization and EDA-friendly RTL.">從矩陣運算到 Latch 記憶體與錯誤偵測，一段專注於 PPA (Power, Performance, Area) 效能優化與 EDA-friendly RTL 的設計旅程。</p>
+
+                                        <div class="table-responsive">
+                                            <table class="table table-sm gp-table align-middle">
+                                                <thead>
+                                                    <tr class="text-muted small">
+                                                        <th data-en="Lab">實驗</th>
+                                                        <th data-en="Topic">主題</th>
+                                                        <th data-en="Score">分數</th>
+                                                        <th data-en="Class Rank">全班排名</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr><td class="fw-bold">Lab 1</td><td data-en="8×8 Matrix Multiplication">8×8 矩陣乘法</td><td>93.2</td><td><span class="rank-badge">#11</span></td></tr>
+                                                    <tr><td class="fw-bold">Lab 2</td><td data-en="Dart Game Controller">飛鏢遊戲控制器</td><td>87.1</td><td><span class="rank-badge">#28</span></td></tr>
+                                                    <tr><td class="fw-bold">Lab 3</td><td data-en="Clock Jitter Analysis">時脈抖動分析</td><td>98.0</td><td class="text-muted">—</td></tr>
+                                                    <tr><td class="fw-bold">Lab 4</td><td data-en="Dual-Port FIFO with Latch">Latch 雙埠 FIFO</td><td>85.4</td><td><span class="rank-badge">#22</span></td></tr>
+                                                    <tr><td class="fw-bold">Lab 5</td><td data-en="Error Detection (AMED)">錯誤偵測 (AMED)</td><td>97.2</td><td><span class="rank-badge">#5</span></td></tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <div class="lab-item">
+                                            <div class="lab-name" data-en="Architecture thinking">架構思維</div>
+                                            <div class="small text-muted" data-en="Shift-register latency hiding, and a &quot;subtraction philosophy&quot; — removing unnecessary resets and heavy FSMs in favor of counter-driven control to push PPA to the limit.">以 Shift Register 隱藏延遲，實踐「減法哲學」：拔除非必要 Reset、以 Counter-driven 取代笨重 FSM，將 PPA 榨取到極限。</div>
+                                        </div>
+                                        <div class="lab-item">
+                                            <div class="lab-name" data-en="Rigorous coding style">嚴謹設計規範</div>
+                                            <div class="small text-muted" data-en="Strict coding style (one always block, no if-else) building synthesizable, debuggable, EDA-friendly RTL habits.">嚴苛 Coding Style (One always block、No if-else)，培養易合成、易除錯、對 EDA Tools 友善的 RTL 習慣。</div>
+                                        </div>
+                                        <div class="lab-item">
+                                            <div class="lab-name" data-en="Real-world physical limits">物理限制實戰</div>
+                                            <div class="small text-muted" data-en="Facing clock jitter setup/hold violations and latch-based FIFO — reading timing reports, using negedge to prevent glitches, and handling time borrowing.">直面 Clock Jitter 的 Setup/Hold Violation 與 Latch FIFO：看懂 Timing Report、用 negedge 防 Glitch、處理 Time Borrowing。</div>
+                                        </div>
+
+                                        <div class="mt-4">
+                                            <span class="gp-tag gp-tag-alt">Verilog</span>
+                                            <span class="gp-tag gp-tag-alt">RTL Design</span>
+                                            <span class="gp-tag gp-tag-alt">PPA Optimization</span>
+                                            <span class="gp-tag gp-tag-alt">FIFO</span>
+                                            <span class="gp-tag gp-tag-alt">Timing Analysis</span>
+                                            <span class="gp-tag gp-tag-alt">EDA Tools</span>
+                                        </div>
+
+                                        <a class="btn btn-dark px-4 py-2 mt-4 fw-bold" href="https://github.com/wei122802/VLSI-Design-and-Implementation" target="_blank">
+                                            <i class="bi bi-github me-2"></i><span data-en="View on GitHub">GitHub 詳細內容</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-center text-center">
+                <div class="col-auto">
+                    <div class="small m-0 text-muted">Copyright &copy; Chia Wei 2026</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/dist/js/scripts.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 400, once: true, offset: 80 });
+    </script>
+</body>
+</html>
