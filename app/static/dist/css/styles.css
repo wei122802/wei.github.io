@@ -11796,3 +11796,9 @@ body.dark-mode .contact-title { color: #e6e8ef; }
 body.dark-mode .realtek-photo { background: #161a26; }
 body.dark-mode .shadow, body.dark-mode .shadow-sm, body.dark-mode .shadow-lg { box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.5) !important; }
 body.dark-mode .badge.bg-light { background-color: #1e2334 !important; }
+
+/* Force language toggle to brand blue regardless of theme palette (styles2.css primary is orange) */
+#langToggle { color: #1e30f3 !important; border-color: #1e30f3 !important; background-color: transparent !important; }
+#langToggle:hover, #langToggle:focus { color: #fff !important; background-color: #1e30f3 !important; border-color: #1e30f3 !important; }
+body.dark-mode #langToggle { color: #6f7dff !important; border-color: #6f7dff !important; }
+body.dark-mode #langToggle:hover { color: #12151f !important; background-color: #6f7dff !important; }

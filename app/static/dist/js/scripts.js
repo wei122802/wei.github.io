@@ -42,6 +42,10 @@
                 if (!el.hasAttribute('data-zh')) el.setAttribute('data-zh', el.innerHTML);
                 el.innerHTML = (lang === 'en') ? el.getAttribute('data-en') : el.getAttribute('data-zh');
             });
+            document.querySelectorAll('[data-en-href]').forEach(function (el) {
+                if (!el.hasAttribute('data-zh-href')) el.setAttribute('data-zh-href', el.getAttribute('href'));
+                el.setAttribute('href', (lang === 'en') ? el.getAttribute('data-en-href') : el.getAttribute('data-zh-href'));
+            });
             document.documentElement.setAttribute('lang', lang === 'en' ? 'en' : 'zh-TW');
             var lb = document.getElementById('langToggle');
             if (lb) lb.textContent = (lang === 'en') ? '中文' : 'EN';
