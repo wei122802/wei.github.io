@@ -33,12 +33,6 @@
                 box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
             }
 
-        /* 直式時間軸 */
-        .timeline {
-            position: relative;
-            padding-left: 0;
-        }
-
         .intern-tag {
             font-size: 0.85rem;
             padding: 0.4em 0.9em;
@@ -49,110 +43,6 @@
             font-weight: 600;
             display: inline-block;
         }
-
-        .live-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-weight: 700;
-            font-size: 0.8rem;
-            letter-spacing: 0.5px;
-        }
-
-            .live-badge .dot {
-                width: 9px;
-                height: 9px;
-                border-radius: 50%;
-                background: #22c55e;
-                box-shadow: 0 0 0 rgba(34, 197, 94, 0.6);
-                animation: pulse-dot 1.8s infinite;
-            }
-
-        @keyframes pulse-dot {
-            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6); }
-            70% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
-        }
-
-        /* Realtek 特色面板（無照片時的漂亮圖示區） */
-        .intern-visual {
-            background: linear-gradient(135deg, #1e30f3, #e21e80);
-            border-radius: 18px;
-            min-height: 300px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-align: center;
-            padding: 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-            .intern-visual .big-icon {
-                font-size: 5rem;
-                line-height: 1;
-                margin-bottom: 1rem;
-                filter: drop-shadow(0 6px 12px rgba(0,0,0,0.2));
-            }
-
-            .intern-visual .chip-row {
-                display: flex;
-                gap: 1.5rem;
-                font-size: 2rem;
-                opacity: 0.9;
-                margin-top: 0.5rem;
-            }
-
-        .realtek-photo {
-            position: relative;
-            display: block;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 8px 22px rgba(30, 48, 243, 0.12);
-            background: #fff;
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
-
-            .realtek-photo:hover {
-                transform: translateY(-4px);
-                box-shadow: 0 14px 28px rgba(30, 48, 243, 0.2);
-            }
-
-            .realtek-photo .portfolio-box-caption { border-radius: 16px; }
-
-            .realtek-photo img {
-                display: block;
-                width: 100%;
-                height: auto;
-                aspect-ratio: 4 / 3;
-                object-fit: cover;
-            }
-
-        .intern-photo {
-            display: block;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
-
-            .intern-photo img {
-                width: 100%;
-                height: 220px;
-                object-fit: cover;
-                transition: transform 0.5s ease;
-            }
-
-            .intern-photo:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 14px 28px rgba(0,0,0,0.2);
-            }
-
-            .intern-photo:hover img {
-                transform: scale(1.06);
-            }
 
         /* special.html 風格：hover 顯示漸層 caption */
         .portfolio-box {
@@ -181,6 +71,66 @@
 
             .portfolio-box.cert img { object-fit: contain; background: #f8f9fa; }
 
+        /* Realtek 照片牆：實習證書(主圖) + 實習實景 / 識別證 */
+        #realtek-gallery .rt-cert img {
+            height: 260px;
+            object-fit: contain;
+            background: #f8f9fa;
+            padding: 0.4rem;
+        }
+
+        #realtek-gallery .rt-photo img {
+            height: 170px;
+            object-fit: cover;
+        }
+
+        #realtek-gallery .rt-card img {
+            height: 170px;
+            object-fit: contain;
+            background: #f8f9fa;
+            padding: 0.35rem;
+        }
+
+        body.dark-mode #realtek-gallery .rt-cert img,
+        body.dark-mode #realtek-gallery .rt-card img,
+        body.dark-mode .portfolio-box.cert img { background: #1e2334; }
+
+        /* 已取得證書的驗證徽章 */
+        .proof-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 0.45em 0.9em;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(135deg, #1e30f3, #e21e80);
+            box-shadow: 0 4px 12px rgba(30, 48, 243, 0.25);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+            .proof-badge:hover {
+                color: #fff;
+                transform: translateY(-2px);
+                box-shadow: 0 8px 18px rgba(226, 30, 128, 0.3);
+            }
+
+        /* AI Skill 亮點區塊 */
+        .ai-highlight {
+            border: 1px solid rgba(226, 30, 128, 0.25);
+            border-left: 4px solid #e21e80;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(30, 48, 243, 0.05), rgba(226, 30, 128, 0.07));
+            padding: 1rem 1.1rem;
+        }
+
+        body.dark-mode .ai-highlight {
+            border-color: rgba(226, 30, 128, 0.4);
+            background: linear-gradient(135deg, rgba(30, 48, 243, 0.12), rgba(226, 30, 128, 0.14));
+        }
+
         .portfolio-box-caption {
             position: absolute;
             inset: 0;
@@ -197,13 +147,7 @@
             color: #fff;
         }
 
-        .portfolio-box:hover .portfolio-box-caption,
-        .realtek-photo:hover .portfolio-box-caption { opacity: 1; }
-
-        .cert-photo img {
-            object-fit: contain;
-            background: #f8f9fa;
-        }
+        .portfolio-box:hover .portfolio-box-caption { opacity: 1; }
 
         .company-badge {
             width: 70px;
@@ -276,23 +220,26 @@
                                             </div>
                                         </div>
 
-                                        <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
-                                            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary px-3 py-2"><i class="bi bi-calendar3 me-1"></i>2026/7 ~ 2026/9</span>
+                                        <div class="d-flex flex-wrap align-items-center gap-2 gap-lg-3 mb-3">
+                                            <span class="badge bg-primary bg-opacity-10 text-primary border border-primary px-3 py-2"><i class="bi bi-calendar3 me-1"></i>2026/7/6 ~ 2026/8/31</span>
                                             <span class="badge bg-light text-muted border px-3 py-2"><i class="bi bi-geo-alt-fill me-1"></i><span data-en="Hsinchu Science Park · Realtek Fab 1">新竹科學園區 瑞昱一廠</span></span>
-                                            <span class="live-badge text-success"><span class="dot"></span><span data-en="Internship in progress">實習進行中</span></span>
+                                            <a class="proof-badge" href="../static/dist/assets/Realtek/Realtek_certificate.jpg" title="瑞昱半導體實習證書"><i class="bi bi-patch-check-fill"></i><span data-en="Internship completed · Certificate awarded">實習完成 · 已獲頒實習證書</span></a>
                                         </div>
 
-                                        <div class="fw-bold fs-5 mb-2" data-en="Summer Intern · System Design Dept., Communication Network Business Group">暑期實習生 · 通訊網路事業群 系統設計部門</div>
-                                        <p class="mb-3" data-en='As a summer intern in the <b>System Design Department</b> of the <b>Communication Network Business Group (CN5)</b>, I develop <b>automation test tools for FPGA and ASIC</b>, helping the engineering team improve the efficiency and correctness of the chip-verification flow.'>
-                                            於<b>通訊網路事業群 (CN5)</b> 的<b>系統設計部門</b>擔任暑期實習生，
-                                            負責<b>開發 FPGA 與 ASIC 的自動化測試工具</b>，協助工程團隊提升晶片驗證流程的效率與正確性。
-                                        </p>
+                                        <div class="fw-bold fs-5 mb-3" data-en="Summer Intern · System Design Dept., Communication Network Business Group (CN5)">暑期實習生 · 通訊網路事業群 (CN5) 系統設計部門</div>
 
-                                        <ul class="list-unstyled mb-4">
-                                            <li class="mb-2" data-en='<i class="bi bi-check-circle-fill text-primary me-2"></i>Designed an <b>Automation Test porting / compare tool</b>, reducing manual verification time.'><i class="bi bi-check-circle-fill text-primary me-2"></i>設計<b>Automation Test Porting compare tool</b>，減少人工驗證的時間。</li>
-                                            <li class="mb-2" data-en='<i class="bi bi-check-circle-fill text-primary me-2"></i>Worked on real projects in the System Design Dept., learning the chip flow from design to verification (DV).'><i class="bi bi-check-circle-fill text-primary me-2"></i>參與系統設計部門的實際專案，了解晶片從設計到驗證 (DV) 的流程。</li>
-                                            <li class="mb-0" data-en='<i class="bi bi-check-circle-fill text-primary me-2"></i>Gained a higher-level, end-to-end understanding of the whole project.'><i class="bi bi-check-circle-fill text-primary me-2"></i>從更上層的視角了解整個專案</li>
+                                        <ul class="list-unstyled mb-3">
+                                            <li class="mb-2" data-en='<i class="bi bi-check-circle-fill text-primary me-2"></i>Built <b>FPGA / ASIC automation test tools</b> — an Automation Test porting &amp; compare tool that cut manual verification time.'><i class="bi bi-check-circle-fill text-primary me-2"></i>開發 <b>FPGA / ASIC 自動化測試工具</b>，設計 Automation Test Porting compare tool，減少人工驗證時間。</li>
+                                            <li class="mb-2" data-en='<i class="bi bi-check-circle-fill text-primary me-2"></i>Worked on real department projects, covering the chip flow from design to verification (DV).'><i class="bi bi-check-circle-fill text-primary me-2"></i>參與部門實際專案，掌握晶片從設計到驗證 (DV) 的流程。</li>
+                                            <li class="mb-0" data-en='<i class="bi bi-check-circle-fill text-primary me-2"></i>Understood the project architecture from a system-level view.'><i class="bi bi-check-circle-fill text-primary me-2"></i>以系統層級的視角理解整個專案架構。</li>
                                         </ul>
+
+                                        <div class="ai-highlight mb-4">
+                                            <div class="fw-bold text-secondary mb-1"><i class="bi bi-stars me-2"></i><span data-en="Optimizing the verification flow with AI Skills">以 AI Skill 優化驗證流程</span></div>
+                                            <div class="small mb-0" data-en='Wrote my own <b>AI Skills</b> (Claude Code) to standardize repetitive steps — test-case porting, log parsing, result comparison — shortening each debug iteration.'>
+                                                自行撰寫 <b>AI Skill</b>（Claude Code）標準化 test case porting、log 解析與結果比對等重複步驟，縮短 debug 迭代時間。
+                                            </div>
+                                        </div>
 
                                         <div>
                                             <span class="intern-tag">FPGA</span>
@@ -300,18 +247,41 @@
                                             <span class="intern-tag" data-en="Automation Test">自動化測試</span>
                                             <span class="intern-tag">System Design</span>
                                             <span class="intern-tag">Python / Scripting</span>
+                                            <span class="intern-tag" style="background:rgba(226,30,128,.1);color:#e21e80;">AI Skill</span>
                                         </div>
                                     </div>
                                     <div class="col-lg-5 mt-4 mt-lg-0">
-                                        <!-- 照片牆：日後把照片放進 assets/Realtek/ 後，替換下方 img 的 src 即可 -->
-                                        <a class="realtek-photo d-block mb-2" href="../static/dist/assets/Realtek/Realtek.jpg" title="瑞昱實習照片">
-                                            <img src="../static/dist/assets/Realtek/Realtek.jpg" alt="瑞昱實習照片（待更新）" />
-                                            <div class="portfolio-box-caption">
-                                                <div class="project-category text-white-50 fs-5" data-en="Realtek Semiconductor">瑞昱半導體</div>
-                                                <div class="project-name fs-4 fw-bold" data-en="Internship Site">實習實景</div>
+                                        <!-- 照片牆：實習證書(主圖) + 實習實景 / 員工識別證 -->
+                                        <div class="row g-3" id="realtek-gallery">
+                                            <div class="col-12">
+                                                <a class="portfolio-box rt-cert" href="../static/dist/assets/Realtek/Realtek_certificate.jpg" title="瑞昱半導體 · 實習證書">
+                                                    <img src="../static/dist/assets/Realtek/Realtek_certificate.jpg" alt="瑞昱半導體實習證書" loading="lazy" />
+                                                    <div class="portfolio-box-caption">
+                                                        <div class="project-category text-white-50 small" data-en="Realtek Semiconductor">瑞昱半導體</div>
+                                                        <div class="project-name fs-5 fw-bold" data-en="Internship Certificate">實習證書</div>
+                                                    </div>
+                                                </a>
                                             </div>
-                                        </a>
-                                        <div class="text-muted small text-center"><i class="bi bi-camera me-1"></i><span data-en="Internship photos coming soon">實習照片將陸續更新</span></div>
+                                            <div class="col-7">
+                                                <a class="portfolio-box rt-photo" href="../static/dist/assets/Realtek/Realtek.jpg" title="瑞昱半導體 · 實習實景">
+                                                    <img src="../static/dist/assets/Realtek/Realtek.jpg" alt="瑞昱半導體實習實景" loading="lazy" />
+                                                    <div class="portfolio-box-caption">
+                                                        <div class="project-category text-white-50 small" data-en="Realtek">瑞昱</div>
+                                                        <div class="project-name fw-bold" data-en="Internship Site">實習實景</div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-5">
+                                                <a class="portfolio-box rt-card" href="../static/dist/assets/Realtek/Realtek_card.jpg" title="瑞昱半導體 · 員工識別證">
+                                                    <img src="../static/dist/assets/Realtek/Realtek_card.jpg" alt="瑞昱半導體員工識別證" loading="lazy" />
+                                                    <div class="portfolio-box-caption">
+                                                        <div class="project-category text-white-50 small" data-en="Realtek">瑞昱</div>
+                                                        <div class="project-name fw-bold" data-en="Employee Badge">員工識別證</div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="text-muted small text-center mt-2"><i class="bi bi-hand-index me-1"></i><span data-en="Click a photo to enlarge">點擊照片可放大檢視</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -327,7 +297,7 @@
                         <div class="card shadow border-0 rounded-4 overflow-hidden hover-card" data-aos="fade-up">
                             <div class="card-body p-4 p-lg-5">
                                 <div class="d-flex align-items-center gap-3 mb-3">
-                                    <img class="company-badge" src="../static/dist/assets/SZ/logo.JPG" alt="Zhen Ding" />
+                                    <img class="company-badge" src="../static/dist/assets/SZ/logo.jpg" alt="Zhen Ding" />
                                     <div>
                                         <h3 class="fw-bolder mb-0">臻鼎科技控股股份有限公司</h3>
                                         <div class="text-muted" data-en="Zhen Ding Technology · World's No.1 PCB maker">Zhen Ding Technology · 全球 PCB 市佔第一</div>
@@ -340,10 +310,9 @@
                                 </div>
 
                                 <div class="fw-bold fs-5 mb-2" data-en="IT Division · Assistant Engineer (Summer Intern)">暑期實習生 · 資訊科技處 助理工程師</div>
-                                <p class="mb-4" data-en='A two-month overseas summer internship in <b>Shenzhen</b>. By deploying and operating an <b>ERP system</b>, I gained deep insight into the operations of the world No.1 PCB company. Besides experiencing Shenzhen&apos;s industry culture, I learned requirement analysis and process digitalization in the <b>PCB industry</b>, and built cross-cultural communication and resilience.'>
-                                    於<b>深圳</b>進行為期兩個月的海外暑期實習，透過導入與操作 <b>ERP 系統</b>，
-                                    深入了解全球 PCB 市佔第一企業的營運核心。除了體驗深圳的產業文化與職場生態，
-                                    也實際掌握了 <b>PCB 產業</b> 的需求分析與流程數位化，培養了跨文化溝通與抗壓能力。
+                                <p class="mb-4" data-en='A two-month overseas summer internship in <b>Shenzhen</b>. By deploying and operating an <b>ERP system</b>, I gained insight into the operations of the world No.1 PCB company and learned requirement analysis and process digitalization first-hand.'>
+                                    於<b>深圳</b>為期兩個月的海外暑期實習。透過導入與操作 <b>ERP 系統</b>，
+                                    了解全球 PCB 市佔第一企業的營運核心，並實際掌握需求分析與流程數位化。
                                 </p>
 
                                 <div class="mb-4">
@@ -411,7 +380,7 @@
                                     <div class="col-md-4">
                                         <div class="fs-1"><i class="bi bi-tools"></i></div>
                                         <div class="fw-bold mt-2" data-en="Tool Development">工具開發</div>
-                                        <div class="small text-white-50" data-en="Automation testing × process optimization">自動化測試 × 流程優化</div>
+                                        <div class="small text-white-50" data-en="Automation testing × AI-Skill flow optimization">自動化測試 × AI Skill 流程優化</div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="fs-1"><i class="bi bi-people"></i></div>
@@ -450,13 +419,18 @@
             offset: 80
         });
 
-        var lightbox = new SimpleLightbox('#sz-gallery a.intern-photo, a.realtek-photo', {
+        var lbOptions = {
             overlay: true,
             docClose: true,
             animationSpeed: 200,
             preloading: true,
             alertError: false
-        });
+        };
+
+        // 每個相簿各自一組，避免導覽時混在一起
+        var realtekLightbox = new SimpleLightbox('#realtek-gallery a.portfolio-box', lbOptions);
+        var szLightbox = new SimpleLightbox('#sz-gallery a.portfolio-box', lbOptions);
+        var proofLightbox = new SimpleLightbox('a.proof-badge', lbOptions);
     </script>
 </body>
 </html>
